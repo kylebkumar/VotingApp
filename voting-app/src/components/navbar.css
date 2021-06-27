@@ -1,0 +1,7 @@
+.navigation {
+  background: linear-gradient(to right, rgb(23, 143, 23), rgb(86, 221, 181));
+}
+
+.title {
+  color: black !important; /*only inline css working (see navbar.js) */
+}

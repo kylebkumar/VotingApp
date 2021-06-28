@@ -5,6 +5,7 @@ import SignUpForm from './components/signup';
 import LoginForm from "./components/login";
 import HomePage from './components/homepage';
 import ForgotPasswordForm from './components/forgotPassword';
+import Account from './components/account';
 import Footer from './components/footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -19,6 +20,7 @@ ReactDOM.render(
         <Route path="/login" exact component={() => <LoginForm />} />
         <Route path="/signup" exact component={() => <SignUpForm />} />
         <Route path="/forgot-password" exact component={() => <ForgotPasswordForm />} />
+        <Route path="/account" exact component={() => <Account />} />
     </Switch>
     <Footer/>
   </Router>

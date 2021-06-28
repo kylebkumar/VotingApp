@@ -71,7 +71,7 @@ export default function SignUpForm() {
       <Container component="main" maxWidth="xs">
         {/* Following two lines can be placeholeder for image */}
         <img src={logo} alt="None" width="100%" height="50%"></img>
-        <a href="http://www.freepik.com">Designed by pch.vector / Freepik</a>
+        {/* <a href='https://www.freepik.com/free-photos-vectors/paper'>Paper vector created by freepik - www.freepik.com</a> */}
         <CssBaseline />
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">

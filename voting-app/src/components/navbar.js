@@ -1,11 +1,16 @@
 import React from "react";
-import {Navbar, Nav, Button} from 'react-bootstrap';
+import {Navbar, Nav, Button, Container} from 'react-bootstrap';
 import "./navbar.css";
 import { useAuth } from '../contexts/AuthContext';
 
 export default function NavBar(){
     const { currentUser, logout } = useAuth()  
-    const currentUserComp = <p>Current User: { currentUser && currentUser.email }</p>    
+    const currentUserComp = 
+    <div> 
+        <Container className = "center-align w-50">
+            Current User: { currentUser && currentUser.email }
+        </Container>
+    </div>    
         return (
             <Navbar className="navigation" variant="light" expand="lg">
                 <Navbar.Brand className="title" href="/">Go Vote!</Navbar.Brand>

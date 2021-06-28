@@ -8,11 +8,10 @@ export default function NavBar(){
     const { currentUser, logout } = useAuth()  
 
     const navDropDown = 
-    <NavDropdown className="mr-auto" title = "Account" drop="left" id="basic-nav-dropdown">
-        <NavDropdown.Item className="mr-auto" href="/account">Account Page</NavDropdown.Item>
+    <NavDropdown title = { currentUser.email } drop="left" id="basic-nav-dropdown">
+        <NavDropdown.Item href="/account">Account</NavDropdown.Item>
         <NavDropdown.Divider />
-            <NavDropdown.Item className="mr-auto" disabled>{currentUser && currentUser.email}</NavDropdown.Item>
-            <NavDropdown.Item className="mr-auto" onClick = { logout }>Log Out</NavDropdown.Item>
+            <NavDropdown.Item onClick = { logout }>Log Out</NavDropdown.Item>
     </NavDropdown>
         
         return (
@@ -26,8 +25,12 @@ export default function NavBar(){
                        <Nav.Link href= "https://github.com/KylebKumar/VotingApp" target="_blank">Check out our iOS app!</Nav.Link>
                    </Nav>
                    <Nav className="ml-auto">
-                    {!currentUser && <Button href="/login" variant="primary">Log In</Button>}
-                    {!currentUser && <Button href="/signup" variant="outline-light">Sign Up</Button>}
+                    <div style={{paddingRight: "1em"}}>
+                        {!currentUser && <Button href="/login" variant="primary">Log In</Button>}
+                    </div>
+                    <div>
+                        {!currentUser && <Button href="/signup" variant="outline-light">Sign Up</Button>}
+                    </div>
                     {currentUser && navDropDown}
                    </Nav>
                 </Navbar.Collapse>

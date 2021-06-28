@@ -25,7 +25,7 @@ export default function NavBar(){
                     <Container className>
                         <t style={{color:"white", minWidth:"15vh"}}>Voting Information</t>
                         <t style={{color:"white", minWidth:"10vh"}}>Voting Map</t>
-                        <a style={{minWidth:"10vh"}}href="www.github.com">Check out our iOS app!</a>
+                        <a style={{minWidth:"10vh"}}href="https://github.com/KylebKumar/VotingApp" target="_blank">Check out our iOS app!</a>
                         {!currentUser && <Button href="/login" variant="link">Log In</Button>}
                         {!currentUser && <Button href="/signup" variant="primary">Sign Up</Button>}
                         {currentUser && navDropDown}

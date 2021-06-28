@@ -1,6 +1,7 @@
 import React from "react";
 import {useAuth} from '../contexts/AuthContext';
 import icon1 from './votingIcon.png'
+import icon2 from './votingProcess.png'
 
 export default function HomePage () {
         const { currentUser } = useAuth()
@@ -28,7 +29,7 @@ export default function HomePage () {
                </div>
                <br clear="left" />
                <div style={{ paddingRight:"10%"}}>
-                <img src={icon1} alt="None" 
+                <img src={icon2} alt="None" 
                 width="30%" 
                 height="20%" 
                 style={{ display:"block", 
@@ -39,7 +40,7 @@ export default function HomePage () {
                 </img>
                </div>
                 <div style={{ paddingLeft:"10%"}}>
-                <h5>Actual Second Topic</h5>
+                <h5>How to Vote</h5>
                 <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                 lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                 lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum

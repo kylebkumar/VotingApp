@@ -20,8 +20,8 @@ export default function NavBar(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                    <Nav className="mr-auto">
-                       <Nav.Link>Voting Information</Nav.Link>
-                       <Nav.Link>Voting Map</Nav.Link>
+                       <Nav.Link href="/voting-info">Voting Information</Nav.Link>
+                       <Nav.Link href="/map">Voting Map</Nav.Link>
                        <Nav.Link href= "https://github.com/KylebKumar/VotingApp" target="_blank">Check out our iOS app!</Nav.Link>
                    </Nav>
                    <Nav className="ml-auto">

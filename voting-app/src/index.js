@@ -7,6 +7,8 @@ import HomePage from './components/homepage';
 import ForgotPasswordForm from './components/forgotPassword';
 import Account from './components/account';
 import Footer from './components/footer';
+import VotingInfo from './components/votingInfo';
+import Map from './components/map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthProvider } from './contexts/AuthContext'
@@ -21,6 +23,8 @@ ReactDOM.render(
         <Route path="/signup" exact component={() => <SignUpForm />} />
         <Route path="/forgot-password" exact component={() => <ForgotPasswordForm />} />
         <Route path="/account" exact component={() => <Account />} />
+        <Route path="/voting-info" exact component={() => <VotingInfo />} />
+        <Route path="/map" exact component={() => <Map />} />
     </Switch>
     <Footer/>
   </Router>

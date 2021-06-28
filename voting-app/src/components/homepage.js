@@ -2,13 +2,17 @@ import React from "react";
 import {useAuth} from '../contexts/AuthContext';
 import icon1 from './votingIcon.png'
 import icon2 from './votingProcess.png'
-import { Card, Carousel } from 'react-bootstrap'
+import { Card, Carousel, Container } from 'react-bootstrap'
 // import { Card } from "@material-ui/core";
 
 export default function HomePage () {
         const { currentUser } = useAuth()
         return (
-            <Card>
+            <Container
+            className="d-flex align-items-center" 
+            style={{ minHeight: "30em", minWidth:"70em", padding:"2em" }}
+            >
+            <Card border="primary">
                 <Card.Body>
                 <div>
                     <h1 style={{ textAlign:"center" , paddingTop:"0.5em"}}>Why Vote?</h1>
@@ -25,7 +29,7 @@ export default function HomePage () {
                 </div>
                 <div style={{ paddingRight:"10%" }}>
                         <h5>Why Cast Ballots?</h5>
-                        <Card border="primary">
+                        <Card border="info">
                             <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                             lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -50,7 +54,7 @@ export default function HomePage () {
                 </div>
                     <div style={{ paddingLeft:"10%"}}>
                     <h5>How to Vote</h5>
-                    <Card border="primary">
+                    <Card border="info">
                         <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                             lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -74,7 +78,7 @@ export default function HomePage () {
                 </div>
                 <div style={{ paddingRight:"10%" }}>
                         <h5>Actual Third Topic</h5>
-                        <Card border="primary">
+                        <Card border="info">
                             <Card.Body>
                                 <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                                 lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -100,7 +104,7 @@ export default function HomePage () {
                     <div style={{ paddingLeft:"10%"}}>
                     <h5>Polling Centers Offering Free Food!</h5>
                     {/* https://www.adcouncil.org/all-articles/four-voting-ads-that-have-caught-our-attention */}
-                    <Card border="primary">
+                    <Card border="info">
                         <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                             lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -156,5 +160,6 @@ export default function HomePage () {
                 </div>
                 </Card.Body>
             </Card>
+            </Container>
     );
 }

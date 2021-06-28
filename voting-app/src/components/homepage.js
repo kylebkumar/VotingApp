@@ -12,9 +12,37 @@ export default function HomePage () {
                height="20%" 
                style={{ display:"block", 
                paddingBottom: "0.5em",
-               marginLeft:"auto",
-               marginRight:"auto" 
-               }}></img>
+            //    align:"left",
+               float:"left"
+               }}>
+               </img>
+               <h5>Why Cast Ballots?</h5>
+               <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               </p>
+               <br clear="left" />
+
+               <img src={icon1} alt="None" 
+               width="30%" 
+               height="20%" 
+               style={{ display:"block", 
+               paddingBottom: "0.5em",
+            //    align:"left",
+               float:"right"
+               }}>
+               </img>
+               <h5>Actual Second Topic</h5>
+               <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+               </p>
+               <br clear="right" />
+
             </div>
     );
 }

@@ -20,18 +20,18 @@
                                 <rect key="frame" x="106" y="622" width="202" height="42"/>
                                 <state key="normal" title="Sign in to an existing account"/>
                                 <connections>
-                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="au7-YE-anj"/>
+                                    <segue destination="kmP-ya-bbU" kind="presentation" modalPresentationStyle="overFullScreen" id="UyI-dc-jfs"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wjX-ND-Cug">
                                 <rect key="frame" x="152" y="442" width="104" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIN-rH-JV8">
                                 <rect key="frame" x="121" y="375" width="173" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7WM-4u-z5X">
                                 <rect key="frame" x="73" y="302" width="269" height="44.5"/>
@@ -45,7 +45,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JGF-vX-EXi" kind="presentation" modalPresentationStyle="overFullScreen" id="MD6-AX-t9b"/>
+                                    <action selector="signUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Je-pn-8fT"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRA-QH-gVB">
@@ -81,7 +81,10 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="kmP-ya-bbU" kind="presentation" identifier="loginSegue" modalPresentationStyle="overFullScreen" id="Obm-uO-DAh"/>
+                        <outlet property="confirmPasswordTextField" destination="wjX-ND-Cug" id="RYv-4c-2Ty"/>
+                        <outlet property="emailTextField" destination="7WM-4u-z5X" id="eM9-OZ-36s"/>
+                        <outlet property="passwordTextField" destination="dIN-rH-JV8" id="xHh-jh-Wo8"/>
+                        <segue destination="JGF-vX-EXi" kind="presentation" identifier="signUpSegue" modalPresentationStyle="overFullScreen" id="OnN-9F-RTp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -106,7 +109,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mXQ-9Z-ZUU">
                                 <rect key="frame" x="72.5" y="442.5" width="269" height="44.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9LA-sP-mVO">
                                 <rect key="frame" x="72.5" y="372.5" width="269" height="45"/>
@@ -120,7 +123,7 @@
                                     <color key="titleColor" systemColor="labelColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="JGF-vX-EXi" kind="presentation" modalPresentationStyle="overFullScreen" id="cGt-PO-NfL"/>
+                                    <action selector="login:" destination="kmP-ya-bbU" eventType="touchUpInside" id="w90-7a-8ls"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Log In" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nt5-96-nw2">
@@ -152,6 +155,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="X2Z-ZO-cIl"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="9LA-sP-mVO" id="ZlI-dy-Ubd"/>
+                        <outlet property="passwordTextField" destination="mXQ-9Z-ZUU" id="2ZB-lG-pfx"/>
+                        <segue destination="JGF-vX-EXi" kind="presentation" identifier="loginSegue" modalPresentationStyle="overFullScreen" id="6oX-L2-WWa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZ7-0H-UTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -200,8 +208,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="cGt-PO-NfL"/>
-        <segue reference="ICh-JJ-Hk5"/>
+        <segue reference="6oX-L2-WWa"/>
+        <segue reference="gUY-7k-pPX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">

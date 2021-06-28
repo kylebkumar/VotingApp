@@ -9,3 +9,7 @@ node_modules
 /Pods
 >>>>>>> 4ac447a (adding basic navigation to the IOS app)
 >>>>>>> tmp
+voting-app/.firebaserc
+.gitignore
+voting-app/firebase.json
+voting-app/.firebase/hosting.YnVpbGQ.cache

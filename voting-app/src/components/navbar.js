@@ -11,7 +11,7 @@ export default function NavBar(){
     <NavDropdown className="mr-auto" title = "Account" id="basic-nav-dropdown">
         <NavDropdown.Item className="mr-auto" href="/account">Account Page</NavDropdown.Item>
         <NavDropdown.Divider />
-            <NavDropdown.Item className="mr-auto">{currentUser && currentUser.email}</NavDropdown.Item>
+            <NavDropdown.Item className="mr-auto" disabled>{currentUser && currentUser.email}</NavDropdown.Item>
             <NavDropdown.Item className="mr-auto" onClick = { logout }>Log Out</NavDropdown.Item>
     </NavDropdown>
         

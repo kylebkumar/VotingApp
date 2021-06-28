@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,7 @@
 		BD2D92B92689558400D57A0A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D92B82689558400D57A0A /* LogInViewController.swift */; };
 		BD2D92BB26895D6E00D57A0A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2D92BA26895D6E00D57A0A /* MainViewController.swift */; };
 		BD3F9CA4268983DB000B6DE3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD3F9CA3268983DB000B6DE3 /* GoogleService-Info.plist */; };
+		BD3F9CA6268988EC000B6DE3 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3F9CA5268988EC000B6DE3 /* FirebaseAuthManager.swift */; };
 		BDF6B81C268933C60034D274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF6B81B268933C60034D274 /* AppDelegate.swift */; };
 		BDF6B81E268933C60034D274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF6B81D268933C60034D274 /* SceneDelegate.swift */; };
 		BDF6B820268933C60034D274 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF6B81F268933C60034D274 /* SignUpViewController.swift */; };
@@ -26,6 +27,8 @@
 		BD2D92B82689558400D57A0A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		BD2D92BA26895D6E00D57A0A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD3F9CA3268983DB000B6DE3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BD3F9CA5268988EC000B6DE3 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		BD3F9CA7268996E2000B6DE3 /* VotingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VotingApp.entitlements; sourceTree = "<group>"; };
 		BDF6B818268933C60034D274 /* VotingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VotingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF6B81B268933C60034D274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDF6B81D268933C60034D274 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 				8D742E0EAA0C8553F37F80AE /* Pods-VotingApp.debug.xcconfig */,
 				10A483D33C37249CAD1B53F9 /* Pods-VotingApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -87,6 +89,7 @@
 		BDF6B81A268933C60034D274 /* VotingApp */ = {
 			isa = PBXGroup;
 			children = (
+				BD3F9CA7268996E2000B6DE3 /* VotingApp.entitlements */,
 				BDF6B81B268933C60034D274 /* AppDelegate.swift */,
 				BD3F9CA3268983DB000B6DE3 /* GoogleService-Info.plist */,
 				BDF6B81D268933C60034D274 /* SceneDelegate.swift */,
@@ -97,6 +100,7 @@
 				BDF6B829268933C80034D274 /* Info.plist */,
 				BD2D92B82689558400D57A0A /* LogInViewController.swift */,
 				BD2D92BA26895D6E00D57A0A /* MainViewController.swift */,
+				BD3F9CA5268988EC000B6DE3 /* FirebaseAuthManager.swift */,
 			);
 			path = VotingApp;
 			sourceTree = "<group>";
@@ -216,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3F9CA6268988EC000B6DE3 /* FirebaseAuthManager.swift in Sources */,
 				BD2D92B92689558400D57A0A /* LogInViewController.swift in Sources */,
 				BDF6B820268933C60034D274 /* SignUpViewController.swift in Sources */,
 				BDF6B81C268933C60034D274 /* AppDelegate.swift in Sources */,
@@ -368,7 +373,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VotingApp/VotingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 448BU8YLF9;
 				INFOPLIST_FILE = VotingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,7 +394,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = VotingApp/VotingApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 448BU8YLF9;
 				INFOPLIST_FILE = VotingApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -17,10 +17,14 @@ export default function NavBar(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                    <Nav className="ml-auto">
-                    <div className = "">
-                        {!currentUser && <Button href="/login" className="mr-sm-3" variant="link">Log In</Button>}
-                    </div>
-                    {!currentUser  && <Button href="/signup" variant="primary">Sign Up</Button>}
+                    <Container style={{ minWidth:"5em", justifyContent:"flex-end" }} className = "">
+                
+                        {!currentUser && <Button href="/login" className="" variant="primary">Log In</Button>}
+                   
+                    </Container>
+                    <Container style={{ minWidth:"8em", justifyContent:"flex-end" }} className = "">
+                        {!currentUser  && <Button href="/signup" variant="primary">Sign Up</Button>}
+                    </Container>
                     {currentUser && currentUserComp }
                     {currentUser && <Button onClick= { logout } variant="link">Log Out</Button>}
                    </Nav>

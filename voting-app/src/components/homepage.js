@@ -8,15 +8,12 @@ import { Card, Carousel, Container } from 'react-bootstrap'
 export default function HomePage () {
         const { currentUser } = useAuth()
         return (
-            <Container
-            className="d-flex align-items-center" 
-            style={{ minHeight: "30em", minWidth:"70em", padding:"2em" }}
-            >
+           
             <Card border="primary">
                 <Card.Body>
                 <div>
                     <h1 style={{ textAlign:"center" , paddingTop:"0.5em"}}>Why Vote?</h1>
-                    <hr size="8" width="90%" color="black" />
+                    <hr size="8" width="90%" color="lightBlue" />
                     <div style={{ paddingLeft:"10%"}}>
                         <img src={icon1} alt="None" 
                         width="30%" 
@@ -118,7 +115,8 @@ export default function HomePage () {
                 <br clear="right" />
 
                     <div>
-                        <hr size="8" width="90%" color="black" />  
+                        {/* <hr size="8" width="90%" color="black" />   */}
+                        
                         <h3 style={{textAlign:"center"}}><em>Check Out Our iOS App that Makes Voting Easier!</em></h3>
                         {/*TODO: Resize Carousel to make smaller */}
                         <Carousel fade>
@@ -156,10 +154,11 @@ export default function HomePage () {
                                 </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
+                        
                     </div>
                 </div>
                 </Card.Body>
             </Card>
-            </Container>
+            
     );
 }

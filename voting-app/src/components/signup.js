@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert, Container } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-import logo from "./9800.jpg"
+import logo from "./9800.png"
 
 export default function Signup() {
   const emailRef = useRef()

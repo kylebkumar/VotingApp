@@ -30,7 +30,7 @@ export default function Login() {
   return (
     <Container
       className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "75vh" }}
+      style={{ minHeight: "50em" }}
     >
       <div className="w-100" style={{ maxWidth: "400px" }}>
       <img src={logo} alt="None" width="75%" height="75%" style={{paddingBottom: "1em", paddingLeft: "10vh"}}></img>

@@ -26,7 +26,7 @@ export default function HomePage () {
                 </div>
                 <div style={{ paddingRight:"10%" }}>
                         <h5>Why Cast Ballots?</h5>
-                        <Card border="info">
+                        <Card border="alert">
                             <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                             lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -51,7 +51,7 @@ export default function HomePage () {
                 </div>
                     <div style={{ paddingLeft:"10%"}}>
                     <h5>How to Vote</h5>
-                    <Card border="info">
+                    <Card border="alert">
                         <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                             lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -75,7 +75,7 @@ export default function HomePage () {
                 </div>
                 <div style={{ paddingRight:"10%" }}>
                         <h5>Actual Third Topic</h5>
-                        <Card border="info">
+                        <Card border="alert">
                             <Card.Body>
                                 <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                                 lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -101,7 +101,7 @@ export default function HomePage () {
                     <div style={{ paddingLeft:"10%"}}>
                     <h5>Polling Centers Offering Free Food!</h5>
                     {/* https://www.adcouncil.org/all-articles/four-voting-ads-that-have-caught-our-attention */}
-                    <Card border="info">
+                    <Card border="alert">
                         <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                             lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum

@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 node_modules
+=======
+.DS_Store
+/Pods
+>>>>>>> 4ac447a (adding basic navigation to the IOS app)

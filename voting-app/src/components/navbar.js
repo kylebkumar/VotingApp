@@ -1,5 +1,5 @@
 import React from "react";
-import {Navbar, Nav, Button, Container} from 'react-bootstrap';
+import { Navbar, Nav, Button, Container} from 'react-bootstrap';
 import "./navbar.css";
 import { useAuth } from '../contexts/AuthContext';
 
@@ -8,7 +8,7 @@ export default function NavBar(){
     const currentUserComp = 
     <div> 
         <Container className = "center-align w-50">
-            Current User: { currentUser && currentUser.email }
+            <p style={{color:"white"}}>Current User: { currentUser && currentUser.email }</p>
         </Container>
     </div>    
         return (
@@ -17,16 +17,13 @@ export default function NavBar(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                    <Nav className="ml-auto">
-                    <Container style={{ minWidth:"5em", justifyContent:"flex-end" }} className = "">
-                
-                        {!currentUser && <Button href="/login" className="" variant="primary">Log In</Button>}
-                   
+                    <Container className = "align-items-end justify-content-end">
+                        {!currentUser && <Button href="/login" variant="link">Log In</Button>}
+                        {!currentUser && <Button href="/signup" variant="primary">Sign Up</Button>}
+                        {currentUser && currentUserComp }
+                        {currentUser && <Button onClick= { logout } variant="link">Log Out</Button>}
                     </Container>
-                    <Container style={{ minWidth:"8em", justifyContent:"flex-end" }} className = "">
-                        {!currentUser  && <Button href="/signup" variant="primary">Sign Up</Button>}
-                    </Container>
-                    {currentUser && currentUserComp }
-                    {currentUser && <Button onClick= { logout } variant="link">Log Out</Button>}
+                    
                    </Nav>
                 </Navbar.Collapse>
             </Navbar>

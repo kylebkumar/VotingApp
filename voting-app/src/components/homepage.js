@@ -2,6 +2,7 @@ import React from "react";
 import {useAuth} from '../contexts/AuthContext';
 import icon1 from './votingIcon.png'
 import icon2 from './votingProcess.png'
+import { Carousel } from 'react-bootstrap'
 
 export default function HomePage () {
         const { currentUser } = useAuth()
@@ -81,7 +82,8 @@ export default function HomePage () {
                 </img>
                </div>
                 <div style={{ paddingLeft:"10%"}}>
-                <h5>Actual Fourth Topic</h5>
+                <h5>Polling Centers Offering Free Food!</h5>
+                {/* https://www.adcouncil.org/all-articles/four-voting-ads-that-have-caught-our-attention */}
                 <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                 lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
                 lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -90,6 +92,42 @@ export default function HomePage () {
                 </p>
                </div>
                <br clear="right" />
+
+               <Carousel>
+  <Carousel.Item interval={1000}>
+    <img
+      className="d-block w-100"
+      src={icon1}
+      alt="First slide"
+    />
+    <Carousel.Caption>
+      <h3>First slide label</h3>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item interval={500}>
+    <img
+      className="d-block w-100"
+      src={icon2}
+      alt="Second slide"
+    />
+    <Carousel.Caption>
+      <h3>Second slide label</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+  <Carousel.Item>
+    <img
+      className="d-block w-100"
+      src={icon1}
+      alt="Third slide"
+    />
+    <Carousel.Caption>
+      <h3>Third slide label</h3>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </Carousel.Caption>
+  </Carousel.Item>
+</Carousel>
 
             </div>
     );

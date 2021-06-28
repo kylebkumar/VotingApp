@@ -8,7 +8,7 @@ export default function NavBar(){
     const { currentUser, logout } = useAuth()  
 
     const navDropDown = 
-    <NavDropdown title = { currentUser.email } drop="left" id="basic-nav-dropdown">
+    <NavDropdown title = { currentUser && currentUser.email } drop="left" id="basic-nav-dropdown">
         <NavDropdown.Item href="/account">Account</NavDropdown.Item>
         <NavDropdown.Divider />
             <NavDropdown.Item onClick = { logout }>Log Out</NavDropdown.Item>

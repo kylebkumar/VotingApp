@@ -53,11 +53,12 @@ export default function HomePage () {
                     <h5>How to Vote</h5>
                     <Card border="alert">
                         <Card.Body>
-                            <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+                            <p>
+                            It is good practice to follow the news and use the internet to search
+                            up local and state representatives. Increasing awareness of your choices
+                            of candidates will increase the likelihood of you making more informed
+                            decisions and may motivate you to follow a candidate whose goals align 
+                            to yours.
                             </p>
                         </Card.Body>
                     </Card>

@@ -28,11 +28,11 @@ export default function HomePage () {
                         <h5>Why Cast Ballots?</h5>
                         <Card border="alert">
                             <Card.Body>
-                            <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+                            <p>Casting ballots is a way for you to voice your opinion and to 
+                            see the change that you want. Participating in various elections -
+                            from small to big - is important because your voice matters in shaping
+                            policies that are of importance to you. So, go out and vote because NO
+                            VOTE means NO VOICE and NO CHANGE!
                             </p>
                             </Card.Body>
                         </Card>

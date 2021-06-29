@@ -27,11 +27,11 @@ class LogInViewController: UIViewController {
                 message = "User was sucessfully logged in."
                 self.doSegue()
             } else {
-                message = "There was an error."
-            }
+            message = "There was an error."
             let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.present(alertController, animated: true, completion: nil)
+            }
         }
     }
     

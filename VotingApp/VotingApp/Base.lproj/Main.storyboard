@@ -165,53 +165,176 @@
             </objects>
             <point key="canvasLocation" x="1024.6376811594205" y="93.75"/>
         </scene>
-        <!--Main View Controller-->
+        <!--Tab View Controller-->
         <scene sceneID="M41-uQ-rwV">
             <objects>
-                <viewController id="JGF-vX-EXi" customClass="MainViewController" customModule="VotingApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JGF-vX-EXi" customClass="TabViewController" customModule="VotingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AXp-z8-keS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This will be the rest of the app" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwW-6J-cHJ">
-                                <rect key="frame" x="70.5" y="294" width="273" height="26"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eZ-m4-RV7">
-                                <rect key="frame" x="72.5" y="567" width="269" height="45"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <state key="normal" title="Back to Sign Up">
-                                    <color key="titleColor" systemColor="labelColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="overFullScreen" id="ICh-JJ-Hk5"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ptu-Zk-83f">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVn-RT-Nxl">
+                                <rect key="frame" x="37" y="750" width="341" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRE-kc-Gtd">
+                                        <rect key="frame" x="33" y="24" width="44" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" image="scannerDefault">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <state key="selected" image="scannerSelected"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="JGF-vX-EXi" eventType="touchUpInside" id="zLg-FX-Fq4"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsA-90-WjQ">
+                                        <rect key="frame" x="151" y="26" width="39" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" image="mapDefault">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <state key="selected" image="mapSelected"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="JGF-vX-EXi" eventType="touchUpInside" id="HH1-O6-RE0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajz-vF-vDI">
+                                        <rect key="frame" x="257" y="24" width="39" height="39"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="tintColor" systemColor="systemGreenColor"/>
+                                        <state key="normal" image="statsDefault">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                        </state>
+                                        <state key="selected" image="statsSelected"/>
+                                        <connections>
+                                            <action selector="didPressTab:" destination="JGF-vX-EXi" eventType="touchUpInside" id="kHK-wF-BGf"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qow-9y-FOz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="qow-9y-FOz" firstAttribute="bottom" secondItem="0eZ-m4-RV7" secondAttribute="bottom" constant="250" id="NLc-YA-GyL"/>
-                            <constraint firstItem="0eZ-m4-RV7" firstAttribute="height" secondItem="AXp-z8-keS" secondAttribute="height" multiplier="0.05" id="VK3-b1-NMN"/>
-                            <constraint firstItem="0eZ-m4-RV7" firstAttribute="centerX" secondItem="qow-9y-FOz" secondAttribute="centerX" id="nSz-rb-YBj"/>
-                            <constraint firstItem="cwW-6J-cHJ" firstAttribute="top" secondItem="qow-9y-FOz" secondAttribute="top" constant="250" id="nZ9-Ah-vk2"/>
-                            <constraint firstItem="0eZ-m4-RV7" firstAttribute="width" secondItem="AXp-z8-keS" secondAttribute="width" multiplier="0.65" id="x2Y-RJ-Sdv"/>
-                            <constraint firstItem="cwW-6J-cHJ" firstAttribute="centerX" secondItem="qow-9y-FOz" secondAttribute="centerX" id="zVu-gL-EvR"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="Ptu-Zk-83f" id="hng-fx-8tG"/>
+                        <outlet property="tabView" destination="MVn-RT-Nxl" id="frY-JM-O94"/>
+                        <outletCollection property="buttons" destination="hRE-kc-Gtd" collectionClass="NSMutableArray" id="xPY-Gt-BgA"/>
+                        <outletCollection property="buttons" destination="rsA-90-WjQ" collectionClass="NSMutableArray" id="JTQ-M5-Cmw"/>
+                        <outletCollection property="buttons" destination="ajz-vF-vDI" collectionClass="NSMutableArray" id="Ela-gJ-WIw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h6W-fc-JUe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="888"/>
+            <point key="canvasLocation" x="611.59420289855075" y="877.90178571428567"/>
+        </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="s35-Ay-AGu">
+            <objects>
+                <viewController storyboardIdentifier="profileScreen" id="W09-oS-U6Y" customClass="ProfileViewController" customModule="VotingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="01f-Gy-E4r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Profile Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyw-yJ-vQS">
+                                <rect key="frame" x="143" y="438" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2TG-Tj-GuV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pyw-yJ-vQS" firstAttribute="centerY" secondItem="2TG-Tj-GuV" secondAttribute="centerY" id="L7A-rL-CEg"/>
+                            <constraint firstItem="pyw-yJ-vQS" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="fdX-RV-Uw6"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sud-af-EI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-246" y="1610"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="Obt-yt-KHD">
+            <objects>
+                <viewController storyboardIdentifier="mapScreen" id="xXf-db-Jas" customClass="MapViewController" customModule="VotingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MdN-ef-ugZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Map Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LxR-px-U7G">
+                                <rect key="frame" x="172" y="394" width="91" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="leJ-uu-zvK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LxR-px-U7G" firstAttribute="centerY" secondItem="leJ-uu-zvK" secondAttribute="centerY" id="fZy-05-FBn"/>
+                            <constraint firstItem="LxR-px-U7G" firstAttribute="centerX" secondItem="leJ-uu-zvK" secondAttribute="centerX" id="xYK-St-KCy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2JI-Xt-OrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="690" y="1610"/>
+        </scene>
+        <!--Schedule View Controller-->
+        <scene sceneID="Xfe-f5-5cX">
+            <objects>
+                <viewController storyboardIdentifier="scheduleScreen" id="CSi-qT-Ffc" customClass="ScheduleViewController" customModule="VotingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="A5j-Cu-TR4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Schedule Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-nA-ozl">
+                                <rect key="frame" x="143" y="438" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JZH-7m-wMx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ROh-nA-ozl" firstAttribute="centerY" secondItem="JZH-7m-wMx" secondAttribute="centerY" id="rZC-Bx-avd"/>
+                            <constraint firstItem="ROh-nA-ozl" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="uL8-Pa-gDw"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qwm-9g-lG1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1565" y="1610"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6oX-L2-WWa"/>
-        <segue reference="gUY-7k-pPX"/>
+        <segue reference="OnN-9F-RTp"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="mapDefault" width="112.5" height="112.5"/>
+        <image name="mapSelected" width="112.5" height="112.5"/>
+        <image name="scannerDefault" width="112.5" height="112.5"/>
+        <image name="scannerSelected" width="112.5" height="112.5"/>
+        <image name="statsDefault" width="112.5" height="112.5"/>
+        <image name="statsSelected" width="112.5" height="112.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

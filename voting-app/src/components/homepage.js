@@ -28,11 +28,11 @@ export default function HomePage () {
                         <h5>Why Cast Ballots?</h5>
                         <Card border="alert">
                             <Card.Body>
-                            <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+                            <p>Casting ballots is a way for you to voice your opinion and to 
+                            see the change that you want. Participating in various elections -
+                            from small to big - is important because your voice matters in shaping
+                            policies that are of importance to you. So, go out and vote because NO
+                            VOTE means NO VOICE and NO CHANGE!
                             </p>
                             </Card.Body>
                         </Card>
@@ -53,11 +53,13 @@ export default function HomePage () {
                     <h5>How to Vote</h5>
                     <Card border="alert">
                         <Card.Body>
-                            <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                            lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
+                            <p>
+                            It is good practice to follow the news and use the internet to search
+                            up local and state representatives. Increasing awareness of your choices
+                            of candidates will increase the likelihood of you making more informed
+                            decisions and may motivate you to follow a candidate whose goals align 
+                            to yours. Find more details below about our iOS App that makes finding
+                            local representatives and locations to vote much easier!
                             </p>
                         </Card.Body>
                     </Card>

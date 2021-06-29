@@ -1,19 +1,18 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Button } from "react-bootstrap"
+import { Button, Card, Container } from "react-bootstrap"
 import mapboxgl from 'mapbox-gl';
+import "./map-container.css"
 //import Iframe from "react-iframe"
 
 mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY
 
 export default function Map() {
 
-  const [userlat, setLat] = useState()
-  const [userlong, setLong] = useState()
+  const [userlat, setLat] = useState(0)
+  const [userlong, setLong] = useState(0)
 
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng, setMapLng] = useState(-70.9);
-  const [lat, setMapLat] = useState(42.35);
   const [zoom, setMapZoom] = useState(9);
 
   useEffect(() => {
@@ -21,18 +20,21 @@ export default function Map() {
       map.current = new mapboxgl.Map({
         container: mapContainer.current,
         style: 'mapbox://styles/mapbox/streets-v11',
-        center: [lng, lat],
+        center: [userlong, userlat],
         zoom: zoom
       });
     });
   return (
-      <div>
-        <Button onClick={getLocation()} variant="primary">Get Location</Button>
-        <t>Coords: { userlat }, { userlong }</t>
-        <div width="100%" height="1000px"ref={mapContainer} className="map-container"/>
-      </div>
+    <Container className="align-items-center" style={{minHeight:"100vh"}}>
+      <Button onClick={ getLocation() } variant="primary">Show Location</Button>
+      <t>Coords: { userlat }, { userlong }</t>
+      <Card ref={mapContainer} className="w-100 align-items-center" style={{minHeight:"50vh"}}/>
+    </Container>
   )
-
+  // function updatePos() {
+  //   setMapLat({ userlat })
+  //   setMapLng({ userlong })
+  // }
   function showLocation(position) {
     var latitude = position.coords.latitude;
     var longitude = position.coords.longitude;

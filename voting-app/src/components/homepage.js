@@ -58,7 +58,8 @@ export default function HomePage () {
                             up local and state representatives. Increasing awareness of your choices
                             of candidates will increase the likelihood of you making more informed
                             decisions and may motivate you to follow a candidate whose goals align 
-                            to yours.
+                            to yours. Find more details below about our iOS App that makes finding
+                            local representatives and locations to vote much easier!
                             </p>
                         </Card.Body>
                     </Card>

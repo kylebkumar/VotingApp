@@ -3,6 +3,7 @@ import GoogleMapReact from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
+//MUST RUN: npm install --save google-map-react
 class Map extends Component {
   static defaultProps = {
     center: {

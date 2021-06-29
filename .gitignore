@@ -13,3 +13,4 @@ voting-app/.firebaserc
 .gitignore
 voting-app/firebase.json
 voting-app/.firebase/hosting.YnVpbGQ.cache
+voting-app/firebase-debug.log

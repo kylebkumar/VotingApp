@@ -1,11 +1,15 @@
 .navigation {
-  background: linear-gradient(to left, rgb(23, 51, 143), rgb(86, 212, 221));
+  /* background: linear-gradient(to left, rgb(23, 51, 143), rgb(86, 212, 221)); */
 }
 
 .button {
-  text: rgb(255, 255, 255)
+  text: rgb(255, 255, 255);
 }
 
 .title {
-  color: rgb(255, 255, 255) !important; /*only inline css working (see navbar.js) */
+  color: rgb(
+    255,
+    255,
+    255
+  ) !important; /*only inline css working (see navbar.js) */
 }

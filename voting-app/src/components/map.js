@@ -8,56 +8,37 @@ mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY
 
 export default function Map() {
 
-  const [userlat, setLat] = useState(0)
-  const [userlong, setLong] = useState(0)
-
-  const mapContainer = useRef(null);
-  const map = useRef(null);
-  const [zoom, setMapZoom] = useState(9);
-
-  useEffect(() => {
-      if (map.current) return; // initialize map only once
-      map.current = new mapboxgl.Map({
-        container: mapContainer.current,
-        style: 'mapbox://styles/mapbox/streets-v11',
-        center: [userlong, userlat],
-        zoom: zoom
-      });
-    });
-  return (
-    <Container className="align-items-center" style={{minHeight:"100vh"}}>
-      <Button style={{ margin:"10px" }} onClick={ getLocation() } variant="primary">Show Location</Button>
-      <t>Coords: { userlat }, { userlong }</t>
-      <Card ref={mapContainer} className="w-100 align-items-center" style={{minHeight:"50vh"}}/>
-    </Container>
-  )
-  // function updatePos() {
-  //   setMapLat({ userlat })
-  //   setMapLng({ userlong })
-  // }
-  function showLocation(position) {
-    var latitude = position.coords.latitude;
-    var longitude = position.coords.longitude;
-    setLat(latitude)
-    setLong(longitude)
-  }
-
- function errorHandler(err) {
-    if(err.code == 1) {
-       alert("Error: Access is denied!");
-    } else if( err.code == 2) {
-       alert("Error: Position is unavailable!");
-    }
- }
-
- function getLocation() {
-
-    if(navigator.geolocation) {
-       // timeout at 60000 milliseconds (60 seconds)
-       var options = {timeout:60000};
-       navigator.geolocation.getCurrentPosition(showLocation, errorHandler, options);
-    } else {
-       alert("Sorry, browser does not support geolocation!");
-    }
- }
+   const mapContainer = useRef(null);
+   const map = useRef(null);
+   const [lng, setLng] = useState(-122.0405);
+   const [lat, setLat] = useState(37.3209);
+   const [zoom, setZoom] = useState(10);
+    
+   useEffect(() => {
+   if (map.current) return; // initialize map only once
+   map.current = new mapboxgl.Map({
+   container: mapContainer.current,
+   style: 'mapbox://styles/mapbox/streets-v11',
+   center: [lng, lat],
+   zoom: zoom
+   });
+   });
+    
+   useEffect(() => {
+   if (!map.current) return; // wait for map to initialize
+   map.current.on('move', () => {
+   setLng(map.current.getCenter().lng.toFixed(4));
+   setLat(map.current.getCenter().lat.toFixed(4));
+   setZoom(map.current.getZoom().toFixed(2));
+   });
+   });
+    
+   return (
+   <div>
+   <div className="sidebar">
+   Longitude: {lng} | Latitude: {lat} | Zoom: {zoom}
+   </div>
+   <div ref={mapContainer} className="map-container" />
+   </div>
+   );
 }

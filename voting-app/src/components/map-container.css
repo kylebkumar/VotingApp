@@ -1,3 +1,20 @@
-/* .map-container{
-    height: 80vh;
-} */
+.map-container {
+  margin-top: 80px;
+  margin-left: 20px;
+  height: 400px;
+  width: 90%;
+}
+
+.sidebar {
+  background-color: rgb(5, 129, 253);
+  color: #ffffff;
+  padding: 6px 12px;
+  font-family: monospace;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 20px;
+  margin-top: 80px;
+  border-radius: 4px;
+}

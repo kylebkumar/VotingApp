@@ -220,7 +220,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="20"/>
@@ -251,8 +251,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Profile Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyw-yJ-vQS">
-                                <rect key="frame" x="143" y="438" width="107" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pyw-yJ-vQS">
+                                <rect key="frame" x="186" y="438" width="107" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a Location!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-13-Db4">
+                                <rect key="frame" x="98" y="511" width="121" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scannerDefault" translatesAutoresizingMaskIntoConstraints="NO" id="m5P-ig-rwl">
+                                <rect key="frame" x="87" y="193" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a date!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04A-m1-HCI">
+                                <rect key="frame" x="149.5" y="584" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -261,14 +276,26 @@
                         <viewLayoutGuide key="safeArea" id="2TG-Tj-GuV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="04A-m1-HCI" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="3Z1-qe-HwA"/>
+                            <constraint firstItem="m5P-ig-rwl" firstAttribute="width" secondItem="01f-Gy-E4r" secondAttribute="width" multiplier="0.5" id="8mW-yT-arz"/>
+                            <constraint firstItem="pyw-yJ-vQS" firstAttribute="top" secondItem="m5P-ig-rwl" secondAttribute="bottom" constant="100" id="DJL-hn-qiS"/>
                             <constraint firstItem="pyw-yJ-vQS" firstAttribute="centerY" secondItem="2TG-Tj-GuV" secondAttribute="centerY" id="L7A-rL-CEg"/>
+                            <constraint firstItem="m5P-ig-rwl" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="OmQ-jY-GVM"/>
+                            <constraint firstItem="wfE-13-Db4" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="Vtb-0o-BDE"/>
                             <constraint firstItem="pyw-yJ-vQS" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="fdX-RV-Uw6"/>
+                            <constraint firstItem="wfE-13-Db4" firstAttribute="top" secondItem="pyw-yJ-vQS" secondAttribute="bottom" constant="50" id="khQ-Fv-D7H"/>
+                            <constraint firstItem="04A-m1-HCI" firstAttribute="top" secondItem="wfE-13-Db4" secondAttribute="bottom" constant="50" id="maj-eX-bWS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dateTextView" destination="04A-m1-HCI" id="Nsk-zd-XQE"/>
+                        <outlet property="emailTextView" destination="pyw-yJ-vQS" id="oO8-Sv-1Cw"/>
+                        <outlet property="locationTextView" destination="wfE-13-Db4" id="fct-wB-BSe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sud-af-EI3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-246" y="1610"/>
+            <point key="canvasLocation" x="-246.37681159420291" y="1609.8214285714284"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="Obt-yt-KHD">
@@ -326,7 +353,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OnN-9F-RTp"/>
+        <segue reference="6oX-L2-WWa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="mapDefault" width="112.5" height="112.5"/>

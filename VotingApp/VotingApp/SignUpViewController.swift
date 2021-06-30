@@ -7,16 +7,29 @@
 
 import UIKit
 
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
 class SignUpViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    var email: String = ""
     var passwordValue = ""
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        print("Sign up view controller loaded")
+        self.hideKeyboardWhenTappedAround()
     }
     
     
@@ -30,7 +43,7 @@ class SignUpViewController: UIViewController {
             }
         }
         if (nil != emailTextField.text && nil != passwordTextField.text) {
-            var email = emailTextField.text!
+            email = emailTextField.text!
             let password = passwordTextField.text!
             if passwordsDontMatch{
                 email = ""
@@ -59,6 +72,13 @@ class SignUpViewController: UIViewController {
     
     func doSegue() {
         performSegue(withIdentifier: "signUpSegue", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "signUpSegue") {
+        let tabViewVC = segue.destination as! TabViewController
+        tabViewVC.email = self.email
+        }
     }
     
     

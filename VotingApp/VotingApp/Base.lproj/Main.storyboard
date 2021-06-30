@@ -173,13 +173,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ptu-Zk-83f">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MVn-RT-Nxl">
-                                <rect key="frame" x="37" y="750" width="341" height="91"/>
+                                <rect key="frame" x="36" y="750" width="341" height="91"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRE-kc-Gtd">
@@ -227,9 +222,19 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ptu-Zk-83f">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qow-9y-FOz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ptu-Zk-83f" firstAttribute="centerY" secondItem="qow-9y-FOz" secondAttribute="centerY" id="Alq-X0-sIh"/>
+                            <constraint firstItem="Ptu-Zk-83f" firstAttribute="centerX" secondItem="qow-9y-FOz" secondAttribute="centerX" id="Igd-Y2-M84"/>
+                            <constraint firstItem="Ptu-Zk-83f" firstAttribute="height" secondItem="AXp-z8-keS" secondAttribute="height" id="Rax-vG-bYr"/>
+                            <constraint firstItem="Ptu-Zk-83f" firstAttribute="width" secondItem="AXp-z8-keS" secondAttribute="width" id="aED-EK-XMa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="Ptu-Zk-83f" id="hng-fx-8tG"/>
@@ -257,17 +262,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a Location!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-13-Db4">
-                                <rect key="frame" x="98" y="511" width="121" height="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="m5P-ig-rwl">
+                                <rect key="frame" x="87" y="193" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m5P-ig-rwl" secondAttribute="height" multiplier="15:15" id="3gN-fT-ig8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a date!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04A-m1-HCI">
+                                <rect key="frame" x="149.5" y="584" width="115" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="scannerDefault" translatesAutoresizingMaskIntoConstraints="NO" id="m5P-ig-rwl">
-                                <rect key="frame" x="87" y="193" width="240" height="128"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a date!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04A-m1-HCI">
-                                <rect key="frame" x="149.5" y="584" width="115" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Find a Location!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wfE-13-Db4">
+                                <rect key="frame" x="143" y="510" width="121" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -277,7 +285,6 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="04A-m1-HCI" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="3Z1-qe-HwA"/>
-                            <constraint firstItem="m5P-ig-rwl" firstAttribute="width" secondItem="01f-Gy-E4r" secondAttribute="width" multiplier="0.5" id="8mW-yT-arz"/>
                             <constraint firstItem="pyw-yJ-vQS" firstAttribute="top" secondItem="m5P-ig-rwl" secondAttribute="bottom" constant="100" id="DJL-hn-qiS"/>
                             <constraint firstItem="pyw-yJ-vQS" firstAttribute="centerY" secondItem="2TG-Tj-GuV" secondAttribute="centerY" id="L7A-rL-CEg"/>
                             <constraint firstItem="m5P-ig-rwl" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="OmQ-jY-GVM"/>
@@ -285,6 +292,7 @@
                             <constraint firstItem="pyw-yJ-vQS" firstAttribute="centerX" secondItem="2TG-Tj-GuV" secondAttribute="centerX" id="fdX-RV-Uw6"/>
                             <constraint firstItem="wfE-13-Db4" firstAttribute="top" secondItem="pyw-yJ-vQS" secondAttribute="bottom" constant="50" id="khQ-Fv-D7H"/>
                             <constraint firstItem="04A-m1-HCI" firstAttribute="top" secondItem="wfE-13-Db4" secondAttribute="bottom" constant="50" id="maj-eX-bWS"/>
+                            <constraint firstItem="m5P-ig-rwl" firstAttribute="width" secondItem="01f-Gy-E4r" secondAttribute="width" multiplier="0.35" id="rx6-ht-mVU"/>
                         </constraints>
                     </view>
                     <connections>
@@ -358,10 +366,11 @@
     <resources>
         <image name="mapDefault" width="112.5" height="112.5"/>
         <image name="mapSelected" width="112.5" height="112.5"/>
-        <image name="scannerDefault" width="112.5" height="112.5"/>
-        <image name="scannerSelected" width="112.5" height="112.5"/>
-        <image name="statsDefault" width="112.5" height="112.5"/>
-        <image name="statsSelected" width="112.5" height="112.5"/>
+        <image name="profile" width="310" height="310.5"/>
+        <image name="scannerDefault" width="120" height="120"/>
+        <image name="scannerSelected" width="120" height="120"/>
+        <image name="statsDefault" width="367.5" height="367.5"/>
+        <image name="statsSelected" width="367.5" height="367.5"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

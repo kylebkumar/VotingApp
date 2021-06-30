@@ -13,9 +13,10 @@ export default function Account(){
             setData(JSON.stringify(snapshot.val()))
             console.log(data)
             });}catch{
-                data.current = "You have no appointments."
+                setData("You have no appointments.")
             }
     }, []);
+
     return (
         <div>
             Current User: { currentUser && currentUser.email }

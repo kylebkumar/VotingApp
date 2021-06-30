@@ -1,18 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react'
-import { Button, Card, Container } from "react-bootstrap"
-//import  mapboxgl from 'mapbox-gl';
-import "./map-container.css"
-import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import Iframe from "react-iframe"
 import { ReactSearchAutocomplete } from "react-search-autocomplete"
 
-//mapboxgl.accessToken = process.env.REACT_APP_MAPBOX_API_KEY
-
-
-
 export default function Map() {
-
-   const [link, setLink] = useState()
   
    const [selectedItem, setItem] = useState({
       id: 0,

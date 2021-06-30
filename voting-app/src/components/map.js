@@ -26,7 +26,7 @@ export default function Map() {
     });
   return (
     <Container className="align-items-center" style={{minHeight:"100vh"}}>
-      <Button onClick={ getLocation() } variant="primary">Show Location</Button>
+      <Button style={{ margin:"10px" }} onClick={ getLocation() } variant="primary">Show Location</Button>
       <t>Coords: { userlat }, { userlong }</t>
       <Card ref={mapContainer} className="w-100 align-items-center" style={{minHeight:"50vh"}}/>
     </Container>

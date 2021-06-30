@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController {
             //get the data corresponding to the email of the user
             let userData = snapshot.value as! [String:Any]
             //cast the user's data as a dictionary (hard-coded to get their first appointment)
-            let appointment1 = userData["Appointment1"] as! Dictionary<String, String>
+            let appointment1 = userData["appointment-1"] as! Dictionary<String, String>
             //cast the values in the dictionary into strings and put them in the text-views
             self.locationTextView.text = appointment1["location"] as! String
             self.dateTextView.text = appointment1["date"] as! String

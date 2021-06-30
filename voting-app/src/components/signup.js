@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert, Container } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import { db } from "../firebase"
 import logo from "./9800.png"
 
 export default function Signup() {
@@ -24,6 +25,12 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
+      db.ref(emailRef.current.value.replace(".", "-")).set({
+        "appointment-1" : {
+          "date" : "m/d/y",
+          "location" : "yes"
+        }
+      })
       history.push("/")
     } catch {
       setError("Failed to create an account")

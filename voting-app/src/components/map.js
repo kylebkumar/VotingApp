@@ -33,15 +33,18 @@ export default function Map() {
       },
       {
         id: 3,
-        name: 'Monta Vista High School'
+        name: 'Monta Vista High School',
+        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.1618130329052!2d-122.05842818439271!3d37.31499457984582!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb45c603f497f%3A0xead757e19654d16b!2sMonta%20Vista%20High%20School!5e0!3m2!1sen!2sus!4v1625032594055!5m2!1sen!2sus"
       },
       {
         id: 4,
-        name: 'Quinlann Community Center'
+        name: 'Quinlann Community Center',
+        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.7039965946383!2d-122.04438618439247!3d37.32583867984374!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb44c402eae63%3A0x12254b555be1023f!2sQuinlan%20Community%20Center!5e0!3m2!1sen!2sus!4v1625032639224!5m2!1sen!2sus"
       },
       {
         id: 5,
-        name: 'Regnart Elementary School'
+        name: 'Regnart Elementary School',
+        url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3173.6449467331327!2d-122.04999308439301!3d37.30354787984791!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb4fafddec977%3A0xf669f5aa955180bf!2sWilliam%20Regnart%20Elementary%20School!5e0!3m2!1sen!2sus!4v1625032808330!5m2!1sen!2sus"
       }
     ]
 

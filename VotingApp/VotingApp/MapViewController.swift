@@ -9,11 +9,14 @@ import UIKit
 
 class MapViewController: UIViewController {
 
+    var email: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
     
 
     /*

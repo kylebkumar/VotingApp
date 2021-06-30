@@ -19,6 +19,7 @@ class TabViewController: UIViewController {
     var mapViewController: UIViewController!
     var statisticsViewController:UIViewController!
     
+    var email:String?
     
     var viewControllers: [UIViewController]!
     
@@ -52,6 +53,19 @@ class TabViewController: UIViewController {
         
         sender.isSelected = true
         let vc = viewControllers[selectedIndex]
+        if selectedIndex == 0{
+            let profileVC = vc as! ProfileViewController
+            profileVC.email = self.email
+        }
+        else if selectedIndex == 1{
+            let mapVC = vc as! MapViewController
+            mapVC.email = self.email
+            
+        } else{
+            let scheduleVC = vc as! ScheduleViewController
+            scheduleVC.email = self.email
+            
+        }
         addChild(vc)
         vc.view.frame = contentView.bounds
         contentView.addSubview(vc.view)

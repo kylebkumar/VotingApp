@@ -12,6 +12,7 @@
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.6.1",
+    "react-datepicker": "^4.1.1",
     "react-dom": "^16.13.1",
     "react-ga": "^2.7.0",
     "react-html-parser": "^2.0.2",

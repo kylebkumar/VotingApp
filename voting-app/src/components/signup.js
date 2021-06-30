@@ -26,9 +26,9 @@ export default function Signup() {
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
       db.ref(emailRef.current.value.replace(".", "-")).set({
-        "appointment-1" : {
-          "date" : "m/d/y",
-          "location" : "yes"
+        "Appointment1" : {
+          "date" : "",
+          "location" : ""
         }
       })
       history.push("/")

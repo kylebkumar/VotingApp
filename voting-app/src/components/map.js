@@ -1,9 +1,14 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Iframe from "react-iframe"
 import { ReactSearchAutocomplete } from "react-search-autocomplete"
+import { Button } from "react-bootstrap"
+import { db } from "../firebase"
+import { useAuth } from '../contexts/AuthContext'
+
+
 
 export default function Map() {
-  
+   const { currentUser } = useAuth() 
    const [selectedItem, setItem] = useState({
       id: 0,
       name: "Cupertino Town Hall",
@@ -58,6 +63,16 @@ export default function Map() {
       console.log('Focused')
     }
 
+    function setLocation(){
+      if (!currentUser){
+        alert("Please log in or make an account to save a location to vote at!")
+      }
+      else{
+      var location = {"Appointment1":{"location":selectedItem.name}}
+      db.ref(currentUser.email.replace(".", "-")).update(location)
+      }
+    }
+    
    return(
       <>
          <div style={{alignItems:"center"}}>
@@ -70,6 +85,7 @@ export default function Map() {
                autoFocus
             />
             <Iframe url= { selectedItem.url } width="100%" height="750px"/>
+            <Button className="w-100" variant="primary" onClick={() => {setLocation()}}>Set Location</Button>
          </div>
       </>
    );

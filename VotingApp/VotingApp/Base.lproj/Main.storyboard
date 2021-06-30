@@ -340,18 +340,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Schedule Screen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ROh-nA-ozl">
-                                <rect key="frame" x="143" y="438" width="129" height="21"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="eLK-tV-Wb6">
+                                <rect key="frame" x="0.0" y="367" width="414" height="216"/>
+                            </datePicker>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="qx0-Ce-Pml">
+                                <rect key="frame" x="0.0" y="180" width="414" height="51"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select a location:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3S-MT-Vt0">
+                                <rect key="frame" x="141.5" y="119" width="131" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick a Time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCt-zc-GVB">
+                                <rect key="frame" x="161" y="306" width="92" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fch-C4-z9U">
+                                <rect key="frame" x="72.5" y="683" width="269" height="45"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Set my Voting Plan">
+                                    <color key="titleColor" systemColor="labelColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JZH-7m-wMx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ROh-nA-ozl" firstAttribute="centerY" secondItem="JZH-7m-wMx" secondAttribute="centerY" id="rZC-Bx-avd"/>
-                            <constraint firstItem="ROh-nA-ozl" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="uL8-Pa-gDw"/>
+                            <constraint firstItem="qx0-Ce-Pml" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="0Pv-AB-WK2"/>
+                            <constraint firstItem="cCt-zc-GVB" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="Fud-ua-JZm"/>
+                            <constraint firstItem="Fch-C4-z9U" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="Ld0-BN-uHe"/>
+                            <constraint firstItem="Fch-C4-z9U" firstAttribute="height" secondItem="A5j-Cu-TR4" secondAttribute="height" multiplier="0.05" id="M56-Xg-nTP"/>
+                            <constraint firstItem="cCt-zc-GVB" firstAttribute="top" secondItem="qx0-Ce-Pml" secondAttribute="bottom" constant="75" id="NpE-fm-VXW"/>
+                            <constraint firstItem="Fch-C4-z9U" firstAttribute="width" secondItem="A5j-Cu-TR4" secondAttribute="width" multiplier="0.65" id="OW7-cC-wKa"/>
+                            <constraint firstItem="qx0-Ce-Pml" firstAttribute="top" secondItem="c3S-MT-Vt0" secondAttribute="bottom" constant="40" id="SuO-6F-p8y"/>
+                            <constraint firstItem="eLK-tV-Wb6" firstAttribute="width" secondItem="A5j-Cu-TR4" secondAttribute="width" id="UWT-pC-GcP"/>
+                            <constraint firstItem="eLK-tV-Wb6" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="WwD-Hm-T1D"/>
+                            <constraint firstItem="c3S-MT-Vt0" firstAttribute="centerX" secondItem="JZH-7m-wMx" secondAttribute="centerX" id="Wwj-pa-2u7"/>
+                            <constraint firstItem="c3S-MT-Vt0" firstAttribute="top" secondItem="JZH-7m-wMx" secondAttribute="top" constant="75" id="Z9a-HU-DAv"/>
+                            <constraint firstItem="eLK-tV-Wb6" firstAttribute="top" secondItem="cCt-zc-GVB" secondAttribute="bottom" constant="40" id="aEt-9m-Cv5"/>
+                            <constraint firstItem="qx0-Ce-Pml" firstAttribute="width" secondItem="A5j-Cu-TR4" secondAttribute="width" id="dfP-BZ-Mwe"/>
+                            <constraint firstItem="Fch-C4-z9U" firstAttribute="top" secondItem="eLK-tV-Wb6" secondAttribute="bottom" constant="100" id="lBw-bl-VqI"/>
                         </constraints>
                     </view>
                 </viewController>

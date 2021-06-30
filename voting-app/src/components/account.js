@@ -10,17 +10,22 @@ export default function Account(){
     useEffect(() => {
         try{
             db.ref(currentUser && currentUser.email.replace(".", "-")).on('value', (snapshot) => {
-            setData(JSON.stringify(snapshot.val()))
-            console.log(data)
+            setData(snapshot.val())
             });}catch{
-                setData("You have no appointments.")
+                setData({
+                    "Appointment1" : {
+                        "date" : "You have no appointments.",
+                        "location" : "You have no location."
+                    }
+                })
             }
     }, []);
 
     return (
         <div>
             Current User: { currentUser && currentUser.email }
-            <p>data: { data }</p>
+            <p>date: { data && data["Appointment1"]["date"] }</p>
+            location: { data && data["Appointment1"]["location"] }
         </div>
     )
 }

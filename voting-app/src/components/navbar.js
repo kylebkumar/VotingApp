@@ -11,7 +11,7 @@ export default function NavBar(){
     <NavDropdown title = { currentUser && currentUser.email } drop="left" id="basic-nav-dropdown">
         <NavDropdown.Item href="/account">Account</NavDropdown.Item>
         <NavDropdown.Divider />
-            <NavDropdown.Item onClick = { logout }>Log Out</NavDropdown.Item>
+            <NavDropdown.Item onClick = { logout } href="/">Log Out</NavDropdown.Item>
     </NavDropdown>
         
         return (

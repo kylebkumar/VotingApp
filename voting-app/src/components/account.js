@@ -8,7 +8,12 @@ import moment from 'moment';
 
 export default function Account(){
     const { currentUser } = useAuth() 
-    const [data, setData] = useState()
+    const [data, setData] = useState({
+        "Appointment1" : {
+            "date" : "Loading...",
+            "location" : "Loading..."
+        }
+    })
     // const [startDate, setStartDate] = useState(new Date());
     useEffect(() => {
         try{
@@ -36,8 +41,23 @@ export default function Account(){
     //   }
 
     return (
-        <div>
-            <p>Current User: { currentUser && currentUser.email }</p>
+        <div style={{paddingTop:"5%", paddingLeft:"30%", alignItems:"center", alignContent:"center"}}>
+            <h1>Your Account</h1>
+            <Card className="justify-content-center align-items-center w-50">
+                <Card.Body className="justify-content-center align-items-center w">
+                    <p>Current User: { currentUser && currentUser.email }</p>
+                    <p>Password: ******</p>
+                    <Button variant="link" href="/forgot-password">Reset Password</Button>
+                </Card.Body>
+            </Card>
+            <h1 style={{paddingTop:"5%"}}>Appointment Information</h1>
+            <Card className="justify-content-center align-items-center w-50">
+                <Card.Body>
+                    <h5 style={{textDecoration:"underline"}}>Appointment 1</h5>
+                    <p>Appointment Date: { data && data["Appointment1"]["date"] }</p>
+                    <p>Appointment Location: { data && data["Appointment1"]["location"] }</p>
+                </Card.Body>
+            </Card>
             {/* <p>Please select a date to make an 
                 appointment to vote: </p>
             <div style={{ margin: "20px"}}>

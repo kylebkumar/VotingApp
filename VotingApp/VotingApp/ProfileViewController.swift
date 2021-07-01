@@ -24,7 +24,7 @@ class ProfileViewController: UIViewController {
         //NOTE: This entire code segment will likely break if the user does not have data assosiated with their account
         let ref = Database.database().reference()
         
-        emailTextView.text = email!
+        emailTextView.text = "Your email: " + email!
         //converting the email to a username (swap the '.' with a '-' to make Firebase happy)
         let username = email!.replacingOccurrences(of: ".", with: "-")
         
@@ -36,10 +36,10 @@ class ProfileViewController: UIViewController {
             let appointment1 = userData["Appointment1"] as! Dictionary<String, String>
             //cast the values in the dictionary into strings and put them in the text-views
             if(appointment1["location"]! != ""){
-                self.locationTextView.text = appointment1["location"]!
+                self.locationTextView.text = "Your voting location: " + appointment1["location"]!
             }
             if(appointment1["date"]! != ""){
-                self.dateTextView.text = appointment1["date"]!
+                self.dateTextView.text = "Your voting date: " + appointment1["date"]!
             }
         }
         

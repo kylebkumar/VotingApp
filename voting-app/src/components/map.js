@@ -93,9 +93,22 @@ export default function Map() {
    //    }
    //  }
 
+    function notifySubmission(){
+      if(currentUser && selectedItem.name !== "" && startDate !== null){
+         alert("You have successfully set an appointment. Congratulations!" +
+         " You may view your appointment details on the 'Account' Page.")
+      }
+      else if (!currentUser){
+         alert("Please log in or make an account to save a location and time to vote at!")
+      }
+      else {
+         alert("Please select a location and time to vote at!")
+      }
+    }
+
     function writeData(){
       if (!currentUser){
-        alert("Please log in or make an account to save a location to vote at!")
+        alert("Please log in or make an account to save a location and time to vote at!")
       }
       else{
       var data = {"Appointment1":{"location":selectedItem.name, "date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
@@ -151,18 +164,19 @@ export default function Map() {
                 <div style={{ margin: "2%" }}>
                    <p style={{ height: "20%"}}>
                       Please confirm the date and location information
-                      you have entered on the left by clicking the button
+                      you selected on the left by verifying the details
                       below:
                    </p>
-                  <Button className="w-20" variant="primary" 
-                     onClick={() => {writeData()}}>Set Appointment
-                  </Button>
-                  <div style={{ marginTop: "20px" }}>
-                      Location: { data && data["Appointment1"]["location"] }
+                   <div style={{ marginTop: "20px" }}>
+                      Selected Location: { selectedItem.name }
                    </div>
                    <div style={{ marginTop: "20px" }}>
-                      Date: { data && data["Appointment1"]["date"]  }
+                      Selected Date: { startDate && moment(startDate).format('MMMM Do YYYY, h:mm:ss a') }
                    </div>
+
+                  <Button style={{ marginTop:"20px" }} className="w-20" variant="primary" 
+                     onClick={() => {writeData(); notifySubmission()}}>Set Appointment
+                  </Button>
                </div>
           </Card.Body>
          </Card>

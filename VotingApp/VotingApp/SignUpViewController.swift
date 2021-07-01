@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
@@ -61,6 +62,13 @@ class SignUpViewController: UIViewController {
                 let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 if message == "User was sucessfully created." {
+                    let ref = Database.database().reference()
+                    ref.child(self.email.replacingOccurrences(of: ".", with: "-")).setValue([
+                        "Appointment1":[
+                            "date": "",
+                            "location": ""
+                        ]
+                    ])
                     self.doSegue()
                 }
                 else{

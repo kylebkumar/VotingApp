@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
 
@@ -21,6 +22,11 @@ class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         datePicker.addTarget(self, action: #selector(ScheduleViewController.handler(sender:)), for: UIControl.Event.valueChanged)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = .current
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        self.dateSelected = dateFormatter.string(from: self.datePicker.date)
+        self.locationSelected = self.data[0]
 
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -41,7 +47,6 @@ class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         self.locationSelected = self.data[row]
     }
     @objc func handler(sender: UIDatePicker) {
-        self.dateSelected = "\(datePicker.date)"
         let dateFormatter = DateFormatter()
         dateFormatter.timeZone = .current
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
@@ -58,10 +63,19 @@ class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             time = String(Int(time.prefix(2))!) + time.dropFirst(2) + " AM"
         }
         
+        if time.count < 8{
+            time = "0" + time
+        }
+        
         let dateToSend = self.dateSelected.dropFirst(5).prefix(2) + "/" + self.dateSelected.dropFirst(8).prefix(2) + "/" + self.dateSelected.prefix(4) + " " + time
         
-        print("Date Selected: " + dateToSend)
-        print("Location Selected: " + locationSelected)
+        let ref = Database.database().reference()
+        ref.child(email!.replacingOccurrences(of: ".", with: "-")).setValue([
+            "Appointment1":[
+                "date": dateToSend,
+                "location":self.locationSelected
+            ]
+        ])
     }
     
 

@@ -35,8 +35,12 @@ class ProfileViewController: UIViewController {
             //cast the user's data as a dictionary (hard-coded to get their first appointment)
             let appointment1 = userData["Appointment1"] as! Dictionary<String, String>
             //cast the values in the dictionary into strings and put them in the text-views
-            self.locationTextView.text = appointment1["location"] as! String
-            self.dateTextView.text = appointment1["date"] as! String
+            if(appointment1["location"]! != ""){
+                self.locationTextView.text = appointment1["location"]!
+            }
+            if(appointment1["date"]! != ""){
+                self.dateTextView.text = appointment1["date"]!
+            }
         }
         
     }

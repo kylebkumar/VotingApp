@@ -11,6 +11,21 @@ import moment from 'moment';
 
 
 export default function Map() {
+   useEffect(() => {
+      try{
+          db.ref(currentUser && currentUser.email.replace(".", "-")).on('value', (snapshot) => {
+          setData(snapshot.val())
+          
+          });}catch{
+              setData({
+                  "Appointment1" : {
+                      "date" : "You have no appointments.",
+                      "location" : "You have no location."
+                  }
+              })
+          }
+  }, []);
+
    const { currentUser } = useAuth() 
    const [data, setData] = useState()
    const [startDate, setStartDate] = useState(new Date());
@@ -68,38 +83,30 @@ export default function Map() {
       console.log('Focused')
     }
 
-    function setDate(){
-      if (!currentUser){
-        alert("Please log in or make an account to save a time to vote at!")
-      }
-      else{
-          var time = {"Appointment1":{"date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
-          db.ref(currentUser.email.replace(".", "-")).update(time)
-      }
-    }
+   //  function setDate(){
+   //    if (!currentUser){
+   //      alert("Please log in or make an account to save a time to vote at!")
+   //    }
+   //    else{
+   //        var time = {"Appointment1":{"date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
+   //        db.ref(currentUser.email.replace(".", "-")).update(time)
+   //    }
+   //  }
 
-    function setLocation(){
+    function writeData(){
       if (!currentUser){
         alert("Please log in or make an account to save a location to vote at!")
       }
       else{
-      var location = {"Appointment1":{"location":selectedItem.name}}
-      db.ref(currentUser.email.replace(".", "-")).update(location)
+      var data = {"Appointment1":{"location":selectedItem.name, "date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
+      db.ref(currentUser.email.replace(".", "-")).update(data)
       }
     }
     
    return(
       <>
          <div style={{alignItems:"center"}}>
-         <ReactSearchAutocomplete
-               items={items}
-               onSearch={handleOnSearch}
-               onHover={handleOnHover}
-               onSelect={handleOnSelect}
-               onFocus={handleOnFocus}
-               autoFocus
-            />
-            <p>Current User: { currentUser && currentUser.email }</p>
+            {/* <p>Current User: { currentUser && currentUser.email }</p> */}
             <p>Please select a date to make an 
                 appointment to vote: </p>
             <div style={{ margin: "20px"}}>
@@ -113,16 +120,19 @@ export default function Map() {
                     startDate={startDate}
                     onChange={date => setStartDate(date)}/>
 
-                    <span style={{ marginLeft:"10px" }}>
-                        {<Button className="" variant="primary" 
-                        onClick={() => {setDate()}}>Set Appointment Time</Button>}
-                    </span>
             </div>
-            <p>Your Selected Voting Time: { data && data["Appointment1"]["date"] }</p>
-            <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p>
-
-            <Iframe url= { selectedItem.url } width="500px" height="500px"/>
-            <Button className="w-100" variant="primary" onClick={() => {setLocation()}}>Set Location</Button>
+            <p>Your Selected Voting Time: { moment(startDate).format('MMMM Do YYYY, h:mm:ss a') }</p>
+            <p>Your Selected Voting Location: { selectedItem.name }</p>
+            <ReactSearchAutocomplete
+               items={items}
+               onSearch={handleOnSearch}
+               onHover={handleOnHover}
+               onSelect={handleOnSelect}
+               onFocus={handleOnFocus}
+               autoFocus
+            />
+            <Iframe stle={{ float: "left"}} url= { selectedItem.url } width="500px" height="500px"/>
+            <Button className="w-100" variant="primary" onClick={() => {writeData()}}>Set Location</Button>
          </div>
       </>
    );

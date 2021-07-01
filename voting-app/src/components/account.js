@@ -9,7 +9,7 @@ import moment from 'moment';
 export default function Account(){
     const { currentUser } = useAuth() 
     const [data, setData] = useState()
-    const [startDate, setStartDate] = useState(new Date());
+    // const [startDate, setStartDate] = useState(new Date());
     useEffect(() => {
         try{
             db.ref(currentUser && currentUser.email.replace(".", "-")).on('value', (snapshot) => {

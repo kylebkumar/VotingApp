@@ -98,10 +98,7 @@ export default function Map() {
          alert("You have successfully set an appointment. Congratulations!" +
          " You may view your appointment details on the 'Account' Page.")
       }
-      else if (!currentUser){
-         alert("Please log in or make an account to save a location and time to vote at!")
-      }
-      else {
+      else if(currentUser){
          alert("Please select a location and time to vote at!")
       }
     }

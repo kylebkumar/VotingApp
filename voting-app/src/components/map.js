@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Iframe from "react-iframe"
 import { ReactSearchAutocomplete } from "react-search-autocomplete"
-import { Button } from "react-bootstrap"
+import { Button, Card } from "react-bootstrap"
 import { db } from "../firebase"
 import { useAuth } from '../contexts/AuthContext'
 import DatePicker from "react-datepicker";
@@ -28,10 +28,10 @@ export default function Map() {
 
    const { currentUser } = useAuth() 
    const [data, setData] = useState()
-   const [startDate, setStartDate] = useState(new Date());
+   const [startDate, setStartDate] = useState(null);
    const [selectedItem, setItem] = useState({
       id: 0,
-      name: "Cupertino Town Hall",
+      name: "",
       url: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.9946780463742!2d-122.03092228439377!3d37.318953746025336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fb44e74e67871%3A0x33f7b0786703deb5!2sCupertino%20City%20Hall!5e0!3m2!1sen!2sus!4v1625027056597!5m2!1sen!2sus"
    })
 
@@ -104,36 +104,69 @@ export default function Map() {
     }
     
    return(
-      <>
-         <div style={{alignItems:"center"}}>
-            {/* <p>Current User: { currentUser && currentUser.email }</p> */}
-            <p>Please select a date to make an 
-                appointment to vote: </p>
-            <div style={{ margin: "20px"}}>
-                <DatePicker showTimeSelect
-                    filterDate={d => {
-                        return new Date() < d;
-                    }}
-                    dateFormat="MMMM d, yyyy h:mmaa"
-                    selected={startDate}
-                    selectsStart
-                    startDate={startDate}
-                    onChange={date => setStartDate(date)}/>
+      <div>
+         <Card style={{ marginTop: "2%", marginLeft: "2%", marginBottom: "5%", width: "46%", float:"left" }}>
+            <Card.Body>
+               <div style={{alignItems:"center"}}>
+                  {/* <p>Current User: { currentUser && currentUser.email }</p> */}
+                  <p style={{ margin: "20px" }}>
+                     Please select a date to make an appointment to vote: 
+                  </p>
+                  <div style={{ margin: "20px"}}>
+                     <DatePicker showTimeSelect
+                        filterDate={d => {
+                              return new Date() < d;
+                        }}
+                        dateFormat="MMMM d, yyyy h:mmaa"
+                        selected={startDate}
+                        selectsStart
+                        startDate={startDate}
+                        onChange={date => setStartDate(date)}/>
 
-            </div>
-            <p>Your Selected Voting Time: { moment(startDate).format('MMMM Do YYYY, h:mm:ss a') }</p>
-            <p>Your Selected Voting Location: { selectedItem.name }</p>
-            <ReactSearchAutocomplete
-               items={items}
-               onSearch={handleOnSearch}
-               onHover={handleOnHover}
-               onSelect={handleOnSelect}
-               onFocus={handleOnFocus}
-               autoFocus
-            />
-            <Iframe stle={{ float: "left"}} url= { selectedItem.url } width="500px" height="500px"/>
-            <Button className="w-100" variant="primary" onClick={() => {writeData()}}>Set Location</Button>
-         </div>
-      </>
+                  </div>
+                  {/* <p>Your Selected Voting Time: { moment(startDate).format('MMMM Do YYYY, h:mm:ss a') }</p>
+                  <p>Your Selected Voting Location: { selectedItem.name }</p> */}
+                  <div style={{ margin: "2%", width: "60%"}}>
+                     <ReactSearchAutocomplete
+                        style={{  searchIconMargin: "10px 12px 0 11px" }}
+                        items={items}
+                        onSearch={handleOnSearch}
+                        onHover={handleOnHover}
+                        onSelect={handleOnSelect}
+                        onFocus={handleOnFocus}
+                        autoFocus
+                     />
+                  </div>
+                  <div style={{ marginTop: "2%", width: "40%", height: "40%" }}>
+                     <Iframe url= { selectedItem.url } width="500px" height="500px"/>
+                  </div>
+                  {/* <div style={{ margin: "2%", width: "20%", height: "40%" }}>
+                     <Button className="w-100" variant="primary" onClick={() => {writeData()}}>Set Appointment</Button>
+                  </div> */}
+               </div>
+            </Card.Body>
+         </Card>
+         <Card style={{ marginTop: "2%", marginRight: "2%", width: "46%", float:"right" }}>
+            <Card.Body>
+                <div style={{ margin: "2%" }}>
+                   <p style={{ height: "20%"}}>
+                      Please confirm the date and location information
+                      you have entered on the left by clicking the button
+                      below:
+                   </p>
+                  <Button className="w-20" variant="primary" 
+                     onClick={() => {writeData()}}>Set Appointment
+                  </Button>
+                  <div style={{ marginTop: "20px" }}>
+                      Location: { data && data["Appointment1"]["location"] }
+                   </div>
+                   <div style={{ marginTop: "20px" }}>
+                      Date: { data && data["Appointment1"]["date"]  }
+                   </div>
+               </div>
+          </Card.Body>
+         </Card>
+      </div>
+      
    );
 }

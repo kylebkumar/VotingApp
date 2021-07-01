@@ -25,20 +25,20 @@ export default function Account(){
             }
     }, []);
 
-    function setDate(){
-        if (!currentUser){
-          alert("Please log in or make an account to save a time to vote at!")
-        }
-        else{
-            var time = {"Appointment1":{"date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
-            db.ref(currentUser.email.replace(".", "-")).update(time)
-        }
-      }
+    // function setDate(){
+    //     if (!currentUser){
+    //       alert("Please log in or make an account to save a time to vote at!")
+    //     }
+    //     else{
+    //         var time = {"Appointment1":{"date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
+    //         db.ref(currentUser.email.replace(".", "-")).update(time)
+    //     }
+    //   }
 
     return (
         <div>
             <p>Current User: { currentUser && currentUser.email }</p>
-            <p>Please select a date to make an 
+            {/* <p>Please select a date to make an 
                 appointment to vote: </p>
             <div style={{ margin: "20px"}}>
                 <DatePicker showTimeSelect
@@ -57,7 +57,7 @@ export default function Account(){
                     </span>
             </div>
             <p>Your Selected Voting Time: { data && data["Appointment1"]["date"] }</p>
-            <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p>
+            <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p> */}
         </div>
     )
 }

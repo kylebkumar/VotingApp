@@ -4,11 +4,16 @@ import { ReactSearchAutocomplete } from "react-search-autocomplete"
 import { Button } from "react-bootstrap"
 import { db } from "../firebase"
 import { useAuth } from '../contexts/AuthContext'
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import moment from 'moment';
 
 
 
 export default function Map() {
    const { currentUser } = useAuth() 
+   const [data, setData] = useState()
+   const [startDate, setStartDate] = useState(new Date());
    const [selectedItem, setItem] = useState({
       id: 0,
       name: "Cupertino Town Hall",
@@ -63,6 +68,16 @@ export default function Map() {
       console.log('Focused')
     }
 
+    function setDate(){
+      if (!currentUser){
+        alert("Please log in or make an account to save a time to vote at!")
+      }
+      else{
+          var time = {"Appointment1":{"date": moment(startDate).format('MMMM Do YYYY, h:mm:ss a')}}
+          db.ref(currentUser.email.replace(".", "-")).update(time)
+      }
+    }
+
     function setLocation(){
       if (!currentUser){
         alert("Please log in or make an account to save a location to vote at!")
@@ -84,7 +99,29 @@ export default function Map() {
                onFocus={handleOnFocus}
                autoFocus
             />
-            <Iframe url= { selectedItem.url } width="100%" height="750px"/>
+            <p>Current User: { currentUser && currentUser.email }</p>
+            <p>Please select a date to make an 
+                appointment to vote: </p>
+            <div style={{ margin: "20px"}}>
+                <DatePicker showTimeSelect
+                    filterDate={d => {
+                        return new Date() < d;
+                    }}
+                    dateFormat="MMMM d, yyyy h:mmaa"
+                    selected={startDate}
+                    selectsStart
+                    startDate={startDate}
+                    onChange={date => setStartDate(date)}/>
+
+                    <span style={{ marginLeft:"10px" }}>
+                        {<Button className="" variant="primary" 
+                        onClick={() => {setDate()}}>Set Appointment Time</Button>}
+                    </span>
+            </div>
+            <p>Your Selected Voting Time: { data && data["Appointment1"]["date"] }</p>
+            <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p>
+
+            <Iframe url= { selectedItem.url } width="500px" height="500px"/>
             <Button className="w-100" variant="primary" onClick={() => {setLocation()}}>Set Location</Button>
          </div>
       </>

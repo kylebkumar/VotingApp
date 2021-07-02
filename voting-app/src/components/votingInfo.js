@@ -2,11 +2,16 @@ import React from "react";
 import {useAuth} from '../contexts/AuthContext';
 import icon1 from './votingIcon.png'
 import icon2 from './votingProcess.png'
+import resources from './resources.png'
 import { Card, Carousel, Container } from 'react-bootstrap'
 // import { Card } from "@material-ui/core";
 
 export default function HomePage () {
         const { currentUser } = useAuth()
+        const openInNewTab = (url) => {
+            const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+            if (newWindow) newWindow.opener = null
+          }
         return (
            
             <Card border="primary">
@@ -25,14 +30,17 @@ export default function HomePage () {
                         </img>
                 </div>
                 <div style={{ paddingRight:"10%" }}>
-                        <h5>Why Cast Ballots?</h5>
+                        <h5 style={{ color:"Black" }} >Why Cast Ballots?</h5>
                         <Card border="alert">
                             <Card.Body>
-                            <p>Casting ballots is a way for you to voice your opinion and to 
-                            see the change that you want. Participating in various elections -
-                            from small to big - is important because your voice matters in shaping
-                            policies that are of importance to you. So, go out and vote because NO
-                            VOTE means NO VOICE and NO CHANGE!
+                            <p>
+                            Casting ballots is a way for you to voice your opinion and to 
+                            enact the change that you want. Participating in various elections -
+                            from local to federal - is important because your voice matters in shaping
+                            policies that affect your life. If more people vote, there would be better
+                            representation of the views and values of the people in our country. Various
+                            aspects of our lives, such as education, the economy, healthcare, and infrastructure
+                            are shaped by voting. Therefore, go out and vote today because your voice matters!
                             </p>
                             </Card.Body>
                         </Card>
@@ -50,7 +58,7 @@ export default function HomePage () {
                     </img>
                 </div>
                     <div style={{ paddingLeft:"10%"}}>
-                    <h5>How to Vote</h5>
+                    <h5 style={{ color:"Black" }}>How to Vote</h5>
                     <Card border="alert">
                         <Card.Body>
                             <p>
@@ -58,15 +66,22 @@ export default function HomePage () {
                             up local and state representatives. Increasing awareness of your choices
                             of candidates will increase the likelihood of you making more informed
                             decisions and may motivate you to follow a candidate whose goals align 
-                            to yours. Find more details below about our iOS App that makes finding
-                            local representatives and locations to vote much easier!
+                            to yours. Nonetheless, beware of partisan news sources and avoid them at
+                            all costs because they have the potential to misinform you. Voter suppression
+                            still exists in our world because of obstacles such as limited voting centers
+                            or being unaware of the voting centers around you, which makes locating
+                            voting centers is a problem. But thanks to GoVote! you 
+                            can now search for voting locations nearby and enter in your location to navigate
+                            yourself to a voting center of your choosing. Take your initial steps in 
+                            alleviating voter suppression by selecting a location and booking an 
+                            appointment at a voting center that you choose by using our Voting Map!
                             </p>
                         </Card.Body>
                     </Card>
                 </div>
                 <br clear="right" />
                 <div style={{ paddingLeft:"10%"}}>
-                        <img src={icon1} alt="None" 
+                        <img src={ resources } alt="None" 
                         width="30%" 
                         height="20%" 
                         style={{ display:"block", 
@@ -76,20 +91,45 @@ export default function HomePage () {
                         </img>
                 </div>
                 <div style={{ paddingRight:"10%" }}>
-                        <h5>Actual Third Topic</h5>
+                        <h5 style={{ color:"Black" }} >Voting Resources</h5>
                         <Card border="alert">
                             <Card.Body>
-                                <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                                lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                                lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                                lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                                lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
-                                </p>
+                                    <p>
+                                    Check out some of Cupertino's, California's,
+                                    and the country's Voting Information below:
+                                    </p>
+                                        <ul>
+                                        <li>
+                                            
+                                            <span>Information about 
+                                                elections going on in <a style={{color:"blue"}}
+                                            onClick={() => openInNewTab("https://www.cupertino.org/our-city/departments/city-clerk/cupertino-elections-info")}>
+                                            <em>Cupertino</em>
+                                            </a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                        <span>Information about 
+                                                elections going on in <a style={{color:"blue"}}
+                                            onClick={() => openInNewTab("https://www.cupertino.org/our-city/departments/city-clerk/cupertino-elections-info")}>
+                                            <em>California</em>
+                                            </a>
+                                            </span>
+                                        </li>
+                                        <li>
+                                        <span>Information about 
+                                                elections going on in the <a style={{color:"blue"}}
+                                            onClick={() => openInNewTab("https://www.usa.gov/voting")}>
+                                            <em>US</em>
+                                            </a>
+                                            </span>
+                                        </li>
+                                        </ul>
                             </Card.Body>
                         </Card>
                 </div>
                 <br clear="left" />
-                <div style={{ paddingRight:"10%"}}>
+                {/* <div style={{ paddingRight:"10%"}}>
                     <img src={icon1} alt="None" 
                     width="30%" 
                     height="20%" 
@@ -99,10 +139,10 @@ export default function HomePage () {
                     float:"right"
                     }}>
                     </img>
-                </div>
-                    <div style={{ paddingLeft:"10%"}}>
-                    <h5>Polling Centers Offering Free Food!</h5>
-                    {/* https://www.adcouncil.org/all-articles/four-voting-ads-that-have-caught-our-attention */}
+                </div> */}
+                    {/* <div style={{ paddingLeft:"10%"}}>
+                    <h5 style={{ color:"Black" }} >Polling Centers Offering Free Food!</h5>
+                    https://www.adcouncil.org/all-articles/four-voting-ads-that-have-caught-our-attention
                     <Card border="alert">
                         <Card.Body>
                             <p>lorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsumlorem ipsum dipsum
@@ -113,7 +153,7 @@ export default function HomePage () {
                             </p>
                         </Card.Body>
                     </Card>
-                </div>
+                </div> */}
                 <br clear="right" />
                 </div>
                 </Card.Body>

@@ -1,5 +1,6 @@
 .navigation {
   /* background: linear-gradient(to left, rgb(23, 51, 143), rgb(86, 212, 221)); */
+  position: "fixed-top";
 }
 
 .button {

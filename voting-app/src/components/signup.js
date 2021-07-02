@@ -40,6 +40,7 @@ export default function Signup() {
   }
 
   return (
+    <div style={{ backgroundColor:"ghostWhite", minWidth:"1000px", minHeight:"708px" }} >
     <Container
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "43em" }}
@@ -75,5 +76,6 @@ export default function Signup() {
         </div>
       </div>
     </Container>
+    </div>
   )
 }

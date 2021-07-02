@@ -28,6 +28,7 @@ export default function Login() {
   }
 
   return (
+    <div style={{ backgroundColor:"ghostWhite", minWidth:"1000px", minHeight:"708px" }}>
     <Container
       className="d-flex align-items-center justify-content-center"
       style={{ minHeight: "40em" }}
@@ -62,6 +63,7 @@ export default function Login() {
         </div>
       </div>
     </Container>
+    </div>
   )
 }
 

@@ -266,12 +266,12 @@ export default function Map() {
     
    return(
       <div>
-         <Card style={{ marginTop: "2%", marginLeft: "2%", marginBottom: "5%", width: "45%", float:"left" }}>
+         <Card style={{ borderColor:"lightBlue", backgroundColor:"ghostWhite", marginTop: "2%", marginLeft: "2%", marginBottom: "5%", width: "45%", float:"left" }}>
             <Card.Body>
                <div style={{alignItems:"center"}}>
                   {/* <p>Current User: { currentUser && currentUser.email }</p> */}
-                  <p style={{ margin: "20px" }}>
-                     Please select a date to make an appointment to vote: 
+                  <p style={{ fontStyle:"Helvetica", fontSize:"16px", margin: "20px" }}>
+                     Please select a date and location to make an appointment to vote: 
                   </p>
                   <div style={{ margin: "20px"}}>
                      <DatePicker showTimeSelect
@@ -309,18 +309,20 @@ export default function Map() {
          </Card>
          {/* <Card style={{ marginTop: "20%", marginRight: "2%", width: "46%", float:"right" }}>
             <Card.Body> */}
-            <div style={{ margin:"20px", width:"45%", float:"right" }} >
+            <div style={{ fontFamily: "Helvetica", backgroundColor: "ghostWhite", 
+                border: "solid lightBlue 1px", padding:"2%", margin:"2%", width:"45%", height:"712px", float:"right" }} >
                 <div style={{ margin: "2%" }}>
-                   <p style={{ height: "20%"}}>
-                      Please confirm the date and location information
+                   <p style={{ fontSize:"20px", height: "20%"}}>
+                      <em>Please confirm the date and location information
                       you selected on the left by verifying the details
-                      below:
+                      below:</em>
                    </p>
-                   <div style={{ marginTop: "20vh" }}>
-                      Selected Location: { selectedItem.name }
+                   <hr size="8" width="100%" color="lightBlue" />
+                   <div style={{ fontSize:"18px", marginTop: "5vh" }}>
+                      <b>Selected Location:</b> { selectedItem.name }
                    </div>
-                   <div style={{ marginTop: "20vh" }}>
-                      Selected Date: { startDate && moment(startDate).format('MMMM Do YYYY, h:mm:ss a') }
+                   <div style={{ fontSize:"18px", marginTop: "20vh" }}>
+                   <b>Selected Date:</b> { startDate && moment(startDate).format('MMMM Do YYYY, h:mm:ss a') }
                    </div>
 
                   <Button style={{ marginTop:"20vh" }} className="w-20" variant="primary" 

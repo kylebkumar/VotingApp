@@ -41,6 +41,7 @@ export default function Account(){
     //   }
 
     return (
+        <div style={{ height:"750px", backgroundColor:"azure" }} >
         <Container className="d-flex align-items-center justify-content-center">
             <div style={{paddingTop:"3em"}}>
                 <h1>Your Account</h1>
@@ -81,5 +82,6 @@ export default function Account(){
                 <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p> */}
             </div>
         </Container>
+        </div>
     )
 }

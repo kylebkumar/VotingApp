@@ -93,7 +93,7 @@ export default function ForgotPasswordForm() {
             </Button>
             <Grid container>
               <Grid item xs>
-                <Link href="/login" variant="body2">
+                <Link href="/account" variant="body2">
                   Go Back
                 </Link>
               </Grid>

@@ -111,7 +111,7 @@ export default function HomePage () {
                                         <li>
                                         <span>Information about 
                                                 elections going on in <a style={{color:"blue"}}
-                                            onClick={() => openInNewTab("https://www.cupertino.org/our-city/departments/city-clerk/cupertino-elections-info")}>
+                                            onClick={() => openInNewTab("https://www.sos.ca.gov/elections")}>
                                             <em>California</em>
                                             </a>
                                             </span>

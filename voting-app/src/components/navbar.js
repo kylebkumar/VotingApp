@@ -17,7 +17,9 @@ export default function NavBar(){
         
         return (
             <Navbar className="navigation" bg="primary" variant="dark" expand="sm">
-                 <img src={brand} alt="None" width="15%" height="10%" ></img>
+                 <a href="/">
+                    <img style={{ height:"60px"}} src={brand} alt="None"></img>
+                 </a>
                 {/* <Navbar.Brand className="title" href="/">Go Vote!</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

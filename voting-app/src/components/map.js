@@ -183,7 +183,7 @@ export default function Map() {
                </div>
             </Card.Body>
          </Card>
-         <Card style={{ marginTop: "2%", marginRight: "2%", width: "46%", float:"right" }}>
+         <Card style={{ marginTop: "20%", marginRight: "2%", width: "46%", float:"right" }}>
             <Card.Body>
                 <div style={{ margin: "2%" }}>
                    <p style={{ height: "20%"}}>

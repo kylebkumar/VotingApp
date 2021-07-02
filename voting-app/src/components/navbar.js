@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav, Button, Container, NavDropdown } from 'react-bootstrap';
 //import "./navbar.css";
 import { useAuth } from '../contexts/AuthContext';
+import brand from './goVoteBrand2.png'
 
 
 export default function NavBar(){
@@ -16,7 +17,8 @@ export default function NavBar(){
         
         return (
             <Navbar className="navigation" bg="primary" variant="dark" expand="sm">
-                <Navbar.Brand className="title" href="/">Go Vote!</Navbar.Brand>
+                 <img src={brand} alt="None" width="15%" height="10%" ></img>
+                {/* <Navbar.Brand className="title" href="/">Go Vote!</Navbar.Brand> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                    <Nav className="mr-auto">

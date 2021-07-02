@@ -20,14 +20,16 @@ export default function Footer () {
             transition: "transform 400ms ease-in",
             bottom: 0,
             left: 0,}}>
-            <Typography variant="body2" color="textSecondary" align="center">
-                {'Copyright © '}
-                <Link color="inherit" href="/">
-                    Go Vote!
-                </Link>{' '}
-                {new Date().getFullYear()}
-                {'.'}
-            </Typography>
+            <p style={{ color:"white" }}>
+                <Typography variant="body2" align="center">
+                    {'Copyright © '}
+                    <Link color="inherit" href="/">
+                        Go Vote!
+                    </Link>{' '}
+                    {new Date().getFullYear()}
+                    {'.'}
+                </Typography>
+            </p>
         </div>
     );
 }

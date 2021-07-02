@@ -2,7 +2,7 @@ import React from "react";
 import { Navbar, Nav, Button, Container, NavDropdown } from 'react-bootstrap';
 //import "./navbar.css";
 import { useAuth } from '../contexts/AuthContext';
-import brand from './goVoteBrand2.png'
+import brand from './goVoteBrand.png'
 
 
 export default function NavBar(){

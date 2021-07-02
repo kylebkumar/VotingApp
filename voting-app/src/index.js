@@ -10,6 +10,7 @@ import Footer from './components/footer';
 import VotingInfo from './components/votingInfo';
 import Map from './components/map';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css'
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { AuthProvider } from './contexts/AuthContext'
 

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { useAuth } from '../contexts/AuthContext';
-import { Button, Card } from "react-bootstrap"
+import { Button, Card, Container } from "react-bootstrap"
 import { db } from "../firebase"
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -41,43 +41,45 @@ export default function Account(){
     //   }
 
     return (
-        <div style={{paddingTop:"5%", paddingLeft:"30%", alignItems:"center", alignContent:"center"}}>
-            <h1>Your Account</h1>
-            <Card className="justify-content-center align-items-center w-50">
-                <Card.Body className="justify-content-center align-items-center w">
-                    <p>Current User: { currentUser && currentUser.email }</p>
-                    <p>Password: ******</p>
-                    <Button variant="link" href="/forgot-password">Reset Password</Button>
-                </Card.Body>
-            </Card>
-            <h1 style={{paddingTop:"5%"}}>Appointment Information</h1>
-            <Card className="justify-content-center align-items-center w-50">
-                <Card.Body>
-                    <h5 style={{textDecoration:"underline"}}>Appointment 1</h5>
-                    <p>Appointment Date: { data && data["Appointment1"]["date"] }</p>
-                    <p>Appointment Location: { data && data["Appointment1"]["location"] }</p>
-                </Card.Body>
-            </Card>
-            {/* <p>Please select a date to make an 
-                appointment to vote: </p>
-            <div style={{ margin: "20px"}}>
-                <DatePicker showTimeSelect
-                    filterDate={d => {
-                        return new Date() < d;
-                    }}
-                    dateFormat="MMMM d, yyyy h:mmaa"
-                    selected={startDate}
-                    selectsStart
-                    startDate={startDate}
-                    onChange={date => setStartDate(date)}/>
+        <Container className="d-flex align-items-center justify-content-center">
+            <div style={{paddingTop:"3em"}}>
+                <h1>Your Account</h1>
+                <Card className="w-100">
+                    <Card.Body>
+                        <p>Current User: { currentUser && currentUser.email }</p>
+                        <p>Password: ******</p>
+                        <Button variant="link" href="/forgot-password">Reset Password</Button>
+                    </Card.Body>
+                </Card>
+                <h1 style={{paddingTop:"2em"}}>Appointment Information</h1>
+                <Card className="justify-content-center align-items-center w-100">
+                    <Card.Body>
+                        <h5 style={{textDecoration:"underline"}}>Appointment 1</h5>
+                        <p>Appointment Date: { data && data["Appointment1"]["date"] }</p>
+                        <p>Appointment Location: { data && data["Appointment1"]["location"] }</p>
+                    </Card.Body>
+                </Card>
+                {/* <p>Please select a date to make an 
+                    appointment to vote: </p>
+                <div style={{ margin: "20px"}}>
+                    <DatePicker showTimeSelect
+                        filterDate={d => {
+                            return new Date() < d;
+                        }}
+                        dateFormat="MMMM d, yyyy h:mmaa"
+                        selected={startDate}
+                        selectsStart
+                        startDate={startDate}
+                        onChange={date => setStartDate(date)}/>
 
-                    <span style={{ marginLeft:"10px" }}>
-                        {<Button className="" variant="primary" 
-                        onClick={() => {setDate()}}>Set Appointment Time</Button>}
-                    </span>
+                        <span style={{ marginLeft:"10px" }}>
+                            {<Button className="" variant="primary" 
+                            onClick={() => {setDate()}}>Set Appointment Time</Button>}
+                        </span>
+                </div>
+                <p>Your Selected Voting Time: { data && data["Appointment1"]["date"] }</p>
+                <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p> */}
             </div>
-            <p>Your Selected Voting Time: { data && data["Appointment1"]["date"] }</p>
-            <p>Your Selected Voting Location: {  data && data["Appointment1"]["location"] }</p> */}
-        </div>
+        </Container>
     )
 }

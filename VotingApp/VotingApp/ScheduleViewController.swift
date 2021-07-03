@@ -16,7 +16,7 @@ class ScheduleViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var locationSelected: String = ""
     var dateSelected: String = ""
     
-    let data = ["Regnart", "Kennedy", "Monta Vista"]
+    let data = ["Cupertino City Hall", "Quinlan Community Center", "Los Altos City Hall", "Santa Clara County Civic Center", "Monta Vista High School", "San Jose City Hall", "Temple United Methodist Church", "Ingleside Police Station", "Ocean View Library", "Lynbrook High School"]
     
     override func viewDidLoad() {
         super.viewDidLoad()

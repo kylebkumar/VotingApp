@@ -8,6 +8,7 @@ target 'VotingApp' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Firebase/Database'
+  pod 'GoogleMaps'
   # Pods for VotingApp
 
 end

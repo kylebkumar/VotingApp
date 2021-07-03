@@ -14,7 +14,7 @@
 		BD3F9CA6268988EC000B6DE3 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD3F9CA5268988EC000B6DE3 /* FirebaseAuthManager.swift */; };
 		BDA274EF268AD4C600625E13 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA274EE268AD4C600625E13 /* TabViewController.swift */; };
 		BDA274F1268AD69600625E13 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA274F0268AD69600625E13 /* ProfileViewController.swift */; };
-		BDA274F3268AD6A400625E13 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA274F2268AD6A400625E13 /* MapViewController.swift */; };
+		BDA274F3268AD6A400625E13 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA274F2268AD6A400625E13 /* ViewController.swift */; };
 		BDA274F5268AD6B000625E13 /* ScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA274F4268AD6B000625E13 /* ScheduleViewController.swift */; };
 		BDF6B81C268933C60034D274 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF6B81B268933C60034D274 /* AppDelegate.swift */; };
 		BDF6B81E268933C60034D274 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF6B81D268933C60034D274 /* SceneDelegate.swift */; };
@@ -35,7 +35,7 @@
 		BD3F9CA7268996E2000B6DE3 /* VotingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VotingApp.entitlements; sourceTree = "<group>"; };
 		BDA274EE268AD4C600625E13 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
 		BDA274F0268AD69600625E13 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		BDA274F2268AD6A400625E13 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BDA274F2268AD6A400625E13 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDA274F4268AD6B000625E13 /* ScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleViewController.swift; sourceTree = "<group>"; };
 		BDF6B818268933C60034D274 /* VotingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VotingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDF6B81B268933C60034D274 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -111,7 +111,7 @@
 				BD3F9CA5268988EC000B6DE3 /* FirebaseAuthManager.swift */,
 				BDA274EE268AD4C600625E13 /* TabViewController.swift */,
 				BDA274F0268AD69600625E13 /* ProfileViewController.swift */,
-				BDA274F2268AD6A400625E13 /* MapViewController.swift */,
+				BDA274F2268AD6A400625E13 /* ViewController.swift */,
 				BDA274F4268AD6B000625E13 /* ScheduleViewController.swift */,
 			);
 			path = VotingApp;
@@ -129,6 +129,7 @@
 				BDF6B815268933C60034D274 /* Frameworks */,
 				BDF6B816268933C60034D274 /* Resources */,
 				74DCDEC0DD657B9E884B3D49 /* [CP] Embed Pods Frameworks */,
+				29E27543A2C8A50DC7BCF738 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,6 +187,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		29E27543A2C8A50DC7BCF738 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VotingApp/Pods-VotingApp-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VotingApp/Pods-VotingApp-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VotingApp/Pods-VotingApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		74DCDEC0DD657B9E884B3D49 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,7 +254,7 @@
 				BD2D92B92689558400D57A0A /* LogInViewController.swift in Sources */,
 				BDF6B820268933C60034D274 /* SignUpViewController.swift in Sources */,
 				BDF6B81C268933C60034D274 /* AppDelegate.swift in Sources */,
-				BDA274F3268AD6A400625E13 /* MapViewController.swift in Sources */,
+				BDA274F3268AD6A400625E13 /* ViewController.swift in Sources */,
 				BDA274F5268AD6B000625E13 /* ScheduleViewController.swift in Sources */,
 				BDF6B81E268933C60034D274 /* SceneDelegate.swift in Sources */,
 				BDA274EF268AD4C600625E13 /* TabViewController.swift in Sources */,

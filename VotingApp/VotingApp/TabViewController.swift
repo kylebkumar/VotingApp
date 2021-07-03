@@ -58,8 +58,7 @@ class TabViewController: UIViewController {
             profileVC.email = self.email
         }
         else if selectedIndex == 1{
-            let mapVC = vc as! MapViewController
-            mapVC.email = self.email
+            let ignoreThisCode = 3
             
         } else{
             let scheduleVC = vc as! ScheduleViewController

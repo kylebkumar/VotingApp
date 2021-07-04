@@ -10,7 +10,18 @@ An interactive website and iOS App that increases awareness of why to vote and a
 
 3. Open `VotingApp.xcworkspace` with Xcode, select the iPhone 11 emulator, and run the app.
 
+# Installation (Website)
+
+1. Clone the repository with `git clone https://github.com/KylebKumar/VotingApp.git` 
+
+2. Navigate to `./VotingApp/voting-app` and install the necesary libraries with `npm i`
+
+3. On a command line system (such as Terminal on MacOS), run `npm start` to launch the website
 
 # Dependencies (iOS App)
 
 It is highly recommended that google maps is installed on the device to take full advantage of the map features.
+
+# Dependencies (website)
+
+Running `npm i` will make sure that all libraries (such as Material UI and React-Bootstrap) needed to run the website are installed

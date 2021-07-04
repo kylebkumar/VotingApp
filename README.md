@@ -26,6 +26,6 @@ Visit a live version of our website at [https://go-vote-8df25.web.app](https://g
 
 It is highly recommended that google maps is installed on the device to take full advantage of the map features.
 
-# Dependencies (website)
+# Dependencies (Website)
 
 Running `npm i` will make sure that all libraries (such as Material UI and React-Bootstrap) needed to run the website are installed

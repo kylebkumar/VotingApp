@@ -1,19 +1,19 @@
 # ![logo](https://github.com/KylebKumar/VotingApp/blob/main/VotingApp/VotingApp/Assets.xcassets/AppIcon.appiconset/pnghut_ballot-voting-election-clip-art-logo-1.png) Go Vote!
 
-Helps make recycling easier (and more fun) by using a neural network to detect what type of trash a user takes an image of. Also gives an estimated dollar amount that the user could recieve for recycling the item and points the user to a nearby recycling plant. 
+An interactive website that increases awareness of why to vote and allows users to create an account in order to store location and date information about the voting appointment they make.
 
-# Installation (iOS app)
+# Installation (Website)
 
 1. Clone the repository with `git clone https://github.com/KylebKumar/VotingApp.git` 
 
-2. Navigate to `./VotingApp/VotingApp` and install the necesary libraries with `pod install`
+2. Navigate to `./VotingApp/voting-app` and install the necesary libraries with `npm i`
 
-3. Open `VotingApp.xcworkspace` with Xcode, select the iPhone 11 emulator, and run the app.
+3. On a command line system (such as Terminal on MacOS), run `npm start` to launch the website
 
 
-# Dependencies (iOS App)
+# Dependencies (website)
 
-It is highly recommended that google maps is installed on the device to take full advantage of the map features.
+Running `npm i` will make sure that all libraries (such as Material UI and React-Bootstrap) needed to run the website are installed 
 
 
 # Getting Started with Create React App

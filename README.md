@@ -1,4 +1,4 @@
-# ![logo](https://github.com/KylebKumar/VotingApp/blob/main/VotingApp/VotingApp/Assets.xcassets/AppIcon.appiconset/pnghut_ballot-voting-election-clip-art-logo-1.png) Go Vote!
+# <img src="https://github.com/KylebKumar/VotingApp/blob/main/VotingApp/VotingApp/Assets.xcassets/AppIcon.appiconset/pnghut_ballot-voting-election-clip-art-logo-1.png" alt="drawing" width="50px"/> Go Vote!
 
 An interactive website and iOS App that increases awareness of why to vote and allows users to create an account in order to store location and date information about the voting appointment they make.
 

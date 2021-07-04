@@ -2,6 +2,10 @@
 
 An interactive website and iOS App that increases awareness of why to vote and allows users to create an account in order to store location and date information about the voting appointment they make.
 
+# Deployments
+
+Visit a live version of our website at [https://go-vote-8df25.web.app](https://go-vote-8df25.web.app)
+
 # Installation (iOS app)
 
 1. Clone the repository with `git clone https://github.com/KylebKumar/VotingApp.git` 

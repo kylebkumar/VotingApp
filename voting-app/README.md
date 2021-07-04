@@ -11,6 +11,6 @@ An interactive website that increases awareness of why to vote and allows users 
 3. On a command line system (such as Terminal on MacOS), run `npm start` to launch the website
 
 
-# Dependencies (website)
+# Dependencies (Website)
 
 Running `npm i` will make sure that all libraries (such as Material UI and React-Bootstrap) needed to run the website are installed

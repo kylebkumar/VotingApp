@@ -1,3 +1,6 @@
+An informational and interactive website and iOS App that enable users to increase awareness of why to vote, and allows them to create an account to make an appointment at valid voting centers.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

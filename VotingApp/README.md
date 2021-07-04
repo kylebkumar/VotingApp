@@ -8,7 +8,7 @@ Helps make recycling easier (and more fun) by using a neural network to detect w
 
 2. Navigate to `./VotingApp/VotingApp` and install the necesary libraries with `pod install`
 
-3. Open `VotingApp.xcworkspace` with Xcode, select the iPhone 11 emulator, and run the app.
+3. Open `VotingApp.xcworkspace` with Xcode, select the iPhone 12 emulator, and run the app.
 
 
 # Dependencies (iOS App)

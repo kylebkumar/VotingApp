@@ -1,4 +1,4 @@
-# <img src="https://github.com/KylebKumar/VotingApp/blob/main/VotingApp/VotingApp/Assets.xcassets/AppIcon.appiconset/pnghut_ballot-voting-election-clip-art-logo-1.png" alt="drawing" width="20px"/> Go Vote!
+# <img src="https://github.com/KylebKumar/VotingApp/blob/main/VotingApp/VotingApp/Assets.xcassets/AppIcon.appiconset/pnghut_ballot-voting-election-clip-art-logo-1.png" alt="drawing" width="100px"/> Go Vote!
 
 Helps make recycling easier (and more fun) by using a neural network to detect what type of trash a user takes an image of. Also gives an estimated dollar amount that the user could recieve for recycling the item and points the user to a nearby recycling plant. 
 
